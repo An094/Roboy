@@ -31,14 +31,13 @@ public class CommandHandler : MonoBehaviour
         //m_Command = "Jump";
         m_Object1 = "Ground";
         m_Condition1 = "Ahead";
-        m_Statement1 = "Flip";
+        m_Statement1 = "Jump";
 
         m_Object2 = "Spikes";
-        m_Condition2 = "Ahead";
+        m_Condition2 = "Below";
         m_Statement2 = "Jump";
 
         m_Statement3 = "Walk";
-        //StartCoroutine(Jump());
     }
 
     // Update is called once per frame
@@ -63,7 +62,7 @@ public class CommandHandler : MonoBehaviour
             m_playerController.Walk();
         }
 
-        if (statement.Contains("Jump"))
+        if (statement.Contains("Jump") && !m_playerController.IsJumping())
         {
             m_playerController.Jump();
         }
@@ -72,11 +71,5 @@ public class CommandHandler : MonoBehaviour
         {
             m_playerController.Flip();
         }
-    }
-
-    IEnumerator Jump()
-    {
-        yield return new WaitForSeconds(.5f);
-        m_Command = "Jump Walk";
     }
 }

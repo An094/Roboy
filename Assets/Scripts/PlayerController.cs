@@ -36,7 +36,8 @@ public class PlayerController : MonoBehaviour
 
     private bool m_Grounded = true;
 
-    const float k_GroundedRadius = .15f;
+    const float k_GroundedRadius = .005f;
+    const float k_CheckPointRadius = .15f;
     // Start is called before the first frame update
     void Start()
     {
@@ -75,6 +76,7 @@ public class PlayerController : MonoBehaviour
         if(m_Grounded)
         {
             m_Animator.SetTrigger("Jump");
+            Debug.Log("Jump");
             m_rb.AddForce(Vector2.up * m_JumpForce, ForceMode2D.Impulse);
             m_Grounded = false;
         }
@@ -100,7 +102,7 @@ public class PlayerController : MonoBehaviour
                 }
             case "Below":
                 {
-                    return true;
+                    return CheckBelow(obj);
                     break;
                 }
             case "Behind":
@@ -118,12 +120,30 @@ public class PlayerController : MonoBehaviour
     {
         if(obj == "Ground")
         {
-            return Physics2D.OverlapCircle(m_AheadCheckPoint.position, k_GroundedRadius, m_WhatIsGround);
+            return Physics2D.OverlapCircle(m_AheadCheckPoint.position, k_CheckPointRadius, m_WhatIsGround);
         }
         else if(obj == "Spikes")
         {
-            return Physics2D.OverlapCircle(m_AheadCheckPoint.position, k_GroundedRadius, m_WhatIsSpikes);
+            return Physics2D.OverlapCircle(m_AheadCheckPoint.position, k_CheckPointRadius, m_WhatIsSpikes);
         }
         return false;
+    }
+
+    public bool CheckBelow(string obj)
+    {
+        if (obj == "Ground")
+        {
+            return Physics2D.OverlapCircle(m_BelowCheckPoint.position, k_CheckPointRadius, m_WhatIsGround);
+        }
+        else if (obj == "Spikes")
+        {
+            return Physics2D.OverlapCircle(m_BelowCheckPoint.position, k_CheckPointRadius, m_WhatIsSpikes);
+        }
+        return false;
+    } 
+    
+    public bool IsJumping()
+    {
+        return !m_Grounded;
     }
 }
