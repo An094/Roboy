@@ -219,6 +219,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Condition_Gate
       objectReference: {fileID: 0}
+    - target: {fileID: 8674135944441391565, guid: dff6035ab5dd1de43b9d4d6c537365ae, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: 8766007744531512673, guid: dff6035ab5dd1de43b9d4d6c537365ae, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -1346,6 +1350,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 991fdafca8cf08a46ab82ac725145115, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  IsDragging: 0
+  LastPosition: {x: 0, y: 0, z: 0}
 --- !u!1 &507213586
 GameObject:
   m_ObjectHideFlags: 0
@@ -3246,6 +3252,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Object_Gate
       objectReference: {fileID: 0}
+    - target: {fileID: 8674135944441391565, guid: dff6035ab5dd1de43b9d4d6c537365ae, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3308,10 +3318,26 @@ PrefabInstance:
       propertyPath: m_Name
       value: Statement_Gate
       objectReference: {fileID: 0}
+    - target: {fileID: 8674135944441391565, guid: dff6035ab5dd1de43b9d4d6c537365ae, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: 8766007744531512673, guid: dff6035ab5dd1de43b9d4d6c537365ae, type: 3}
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: cdd059d69961d354bbe5233359bfa95f, type: 3}
+    - target: {fileID: 8766007744531512673, guid: dff6035ab5dd1de43b9d4d6c537365ae, type: 3}
+      propertyPath: m_Color.b
+      value: 0.18431373
+      objectReference: {fileID: 0}
+    - target: {fileID: 8766007744531512673, guid: dff6035ab5dd1de43b9d4d6c537365ae, type: 3}
+      propertyPath: m_Color.g
+      value: 0.7647059
+      objectReference: {fileID: 0}
+    - target: {fileID: 8766007744531512673, guid: dff6035ab5dd1de43b9d4d6c537365ae, type: 3}
+      propertyPath: m_Color.r
+      value: 0.6117647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3410,6 +3436,10 @@ PrefabInstance:
     - target: {fileID: 8674135944441391565, guid: dff6035ab5dd1de43b9d4d6c537365ae, type: 3}
       propertyPath: m_Name
       value: Condition_Gate
+      objectReference: {fileID: 0}
+    - target: {fileID: 8674135944441391565, guid: dff6035ab5dd1de43b9d4d6c537365ae, type: 3}
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 8766007744531512673, guid: dff6035ab5dd1de43b9d4d6c537365ae, type: 3}
       propertyPath: m_Sprite
@@ -3909,10 +3939,26 @@ PrefabInstance:
       propertyPath: m_Name
       value: ELSE_Statement_Gate
       objectReference: {fileID: 0}
+    - target: {fileID: 8674135944441391565, guid: dff6035ab5dd1de43b9d4d6c537365ae, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: 8766007744531512673, guid: dff6035ab5dd1de43b9d4d6c537365ae, type: 3}
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: cdd059d69961d354bbe5233359bfa95f, type: 3}
+    - target: {fileID: 8766007744531512673, guid: dff6035ab5dd1de43b9d4d6c537365ae, type: 3}
+      propertyPath: m_Color.b
+      value: 0.18431373
+      objectReference: {fileID: 0}
+    - target: {fileID: 8766007744531512673, guid: dff6035ab5dd1de43b9d4d6c537365ae, type: 3}
+      propertyPath: m_Color.g
+      value: 0.7647059
+      objectReference: {fileID: 0}
+    - target: {fileID: 8766007744531512673, guid: dff6035ab5dd1de43b9d4d6c537365ae, type: 3}
+      propertyPath: m_Color.r
+      value: 0.6117647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4232,10 +4278,26 @@ PrefabInstance:
       propertyPath: m_Name
       value: Statement_Gate
       objectReference: {fileID: 0}
+    - target: {fileID: 8674135944441391565, guid: dff6035ab5dd1de43b9d4d6c537365ae, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: 8766007744531512673, guid: dff6035ab5dd1de43b9d4d6c537365ae, type: 3}
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: cdd059d69961d354bbe5233359bfa95f, type: 3}
+    - target: {fileID: 8766007744531512673, guid: dff6035ab5dd1de43b9d4d6c537365ae, type: 3}
+      propertyPath: m_Color.b
+      value: 0.18382876
+      objectReference: {fileID: 0}
+    - target: {fileID: 8766007744531512673, guid: dff6035ab5dd1de43b9d4d6c537365ae, type: 3}
+      propertyPath: m_Color.g
+      value: 0.764151
+      objectReference: {fileID: 0}
+    - target: {fileID: 8766007744531512673, guid: dff6035ab5dd1de43b9d4d6c537365ae, type: 3}
+      propertyPath: m_Color.r
+      value: 0.61094457
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4302,6 +4364,10 @@ PrefabInstance:
     - target: {fileID: 8674135944441391565, guid: dff6035ab5dd1de43b9d4d6c537365ae, type: 3}
       propertyPath: m_Name
       value: Object_Gate
+      objectReference: {fileID: 0}
+    - target: {fileID: 8674135944441391565, guid: dff6035ab5dd1de43b9d4d6c537365ae, type: 3}
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

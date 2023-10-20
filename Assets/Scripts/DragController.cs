@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class DragController : MonoBehaviour
 {
-
+    public Draggable LastDragged => _lastDragged;
     private bool _isDragActive = false;
 
     private Vector2 _screenPosition;
@@ -76,7 +76,8 @@ public class DragController : MonoBehaviour
 
     void InitDrag()
     {
-        _isDragActive = true;
+        _lastDragged.LastPosition = _lastDragged.transform.position;
+        UpdateDragStatus(true);
     }
 
     void Drag()
@@ -86,6 +87,11 @@ public class DragController : MonoBehaviour
 
     void Drop()
     {
-        _isDragActive = false;
+        UpdateDragStatus(false);
+    }
+
+    void UpdateDragStatus(bool isDragging)
+    {
+        _isDragActive = _lastDragged.IsDragging = isDragging;
     }
 }
