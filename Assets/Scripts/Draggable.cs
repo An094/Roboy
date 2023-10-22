@@ -12,6 +12,8 @@ public class Draggable : MonoBehaviour
 
     private DragController _dragController;
 
+    private Floppy _floppy;
+
     private float _movementTile = 15f;
 
     private System.Nullable<Vector3> _movementDestination;
@@ -19,6 +21,7 @@ public class Draggable : MonoBehaviour
     private void Awake()
     {
         _collider = GetComponent<Collider2D>();
+        _floppy = GetComponent<Floppy>();
         _dragController = FindObjectOfType<DragController>();
     }
 
@@ -45,13 +48,44 @@ public class Draggable : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.CompareTag("Gate"))
+        switch (_floppy.GetFloppyType())
         {
-            _movementDestination = collision.transform.position;
+            case FloppyData.FloppyType.Object:
+                {
+                    if (collision.CompareTag("RedGate"))
+                    {
+                        _movementDestination = collision.transform.position;
+                    }
+                    
+                    break;
+                }
+            case FloppyData.FloppyType.Condition:
+                {
+                    if (collision.CompareTag("BlueGate"))
+                    {
+                        _movementDestination = collision.transform.position;
+                    }
+                    
+                    break;
+                }
+            case FloppyData.FloppyType.Statement:
+                {
+                    if (collision.CompareTag("GreenGate"))
+                    {
+                        _movementDestination = collision.transform.position;
+                    }
+                    
+                    break;
+                }
+            default:
+                break;
         }
-        else if(collision.CompareTag("InvalidGate"))
-        {
-            _movementDestination = LastPosition;
-        }
+
+        
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        _movementDestination = null;
     }
 }

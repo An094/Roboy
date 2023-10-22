@@ -17,8 +17,8 @@ public class Floppy : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    public FloppyData.FloppyType GetFloppyType()
     {
-        
+        return m_data.m_Type;
     }
 }
