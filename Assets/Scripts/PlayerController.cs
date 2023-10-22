@@ -36,7 +36,7 @@ public class PlayerController : MonoBehaviour
 
     private bool m_Grounded = true;
 
-    const float k_GroundedRadius = .005f;
+    const float k_GroundedRadius = .001f;
     const float k_CheckPointRadius = .15f;
     // Start is called before the first frame update
     void Start()

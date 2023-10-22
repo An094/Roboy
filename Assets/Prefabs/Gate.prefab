@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 1878600356634156743}
   m_Layer: 11
   m_Name: Gate
-  m_TagString: Untagged
+  m_TagString: Gate
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -117,7 +117,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.015395105, y: 0.000000059604645}
+  m_Offset: {x: -0.013389587, y: 0.0019836426}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -128,5 +128,5 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.9794668, y: 0.3845805}
+  m_Size: {x: 0.5893097, y: 0.25982666}
   m_EdgeRadius: 0

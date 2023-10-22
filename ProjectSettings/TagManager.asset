@@ -3,7 +3,8 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Gate
   layers:
   - Default
   - TransparentFX
@@ -17,7 +18,7 @@ TagManager:
   - Player
   - FloppyDisk
   - Gate
-  - 
+  - Dragging
   - 
   - 
   - 
@@ -55,4 +56,7 @@ TagManager:
     locked: 0
   - name: Motherboard
     uniqueID: 3283479981
+    locked: 0
+  - name: FloppyDisk
+    uniqueID: 4190239303
     locked: 0

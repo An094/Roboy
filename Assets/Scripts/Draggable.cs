@@ -26,13 +26,13 @@ public class Draggable : MonoBehaviour
     {
         if(_movementDestination.HasValue)
         {
-            if(IsDragging)
+            if (IsDragging)
             {
-                _movementDestination = null;
+                //_movementDestination = null;
                 return;
             }
-            
-            if(transform.position == _movementDestination)
+
+            if (transform.position == _movementDestination)
             {
                 _movementDestination = null;
             }
