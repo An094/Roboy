@@ -14,10 +14,13 @@ public class Draggable : MonoBehaviour
 
     private Floppy _floppy;
 
+    [SerializeField] private GameObject floppyDisplay;
+
     private float _movementTile = 15f;
 
     private System.Nullable<Vector3> _movementDestination;
 
+    //private bool isStayInGate;
     private void Awake()
     {
         _collider = GetComponent<Collider2D>();
@@ -39,7 +42,7 @@ public class Draggable : MonoBehaviour
             {
                 _movementDestination = null;
             }
-            else
+            else /*if(isStayInGate)*/
             {
                 transform.position = Vector3.Lerp(transform.position, _movementDestination.Value, _movementTile * Time.fixedDeltaTime);
             }
@@ -61,7 +64,7 @@ public class Draggable : MonoBehaviour
                 }
             case FloppyData.FloppyType.Condition:
                 {
-                    if (collision.CompareTag("BlueGate"))
+                    if (collision.CompareTag("GreenGate"))
                     {
                         _movementDestination = collision.transform.position;
                     }
@@ -70,7 +73,7 @@ public class Draggable : MonoBehaviour
                 }
             case FloppyData.FloppyType.Statement:
                 {
-                    if (collision.CompareTag("GreenGate"))
+                    if (collision.CompareTag("BlueGate"))
                     {
                         _movementDestination = collision.transform.position;
                     }
@@ -84,8 +87,28 @@ public class Draggable : MonoBehaviour
         
     }
 
-    private void OnTriggerExit2D(Collider2D collision)
+    public void InitDrag()
     {
-        _movementDestination = null;
+        Vector2 floppyDisplayPos = floppyDisplay.transform.position;
+        floppyDisplay.transform.position = new Vector3(floppyDisplayPos.x, floppyDisplayPos.y + 0.1f, 0f) ;
     }
+
+    //[tmp]
+    public void Drag()
+    {
+        Vector2 floppyDisplayPos = floppyDisplay.transform.position;
+        floppyDisplay.transform.position = new Vector3(floppyDisplayPos.x, floppyDisplayPos.y, 0f);
+    }
+
+    public void Drop()
+    {
+        Vector2 floppyDisplayPos = floppyDisplay.transform.position;
+        floppyDisplay.transform.position = new Vector3(floppyDisplayPos.x, floppyDisplayPos.y - 0.1f, 0f);
+    }
+
+
+    //private void OnTriggerStay2D(Collider2D collision)
+    //{
+    //    isStayInGate = true;
+    //}
 }

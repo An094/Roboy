@@ -65,10 +65,21 @@ public class DragController : MonoBehaviour
             if(hit.collider != null)
             {
                 Draggable draggable = hit.transform.gameObject.GetComponent<Draggable>();
-                if(draggable != null)
+                if (draggable != null)
                 {
                     _lastDragged = draggable;
                     InitDrag();
+                }
+                else
+                {
+                    draggable = hit.transform.gameObject.GetComponentInParent<Draggable>();
+                    {
+                        if(draggable != null)
+                        {
+                            _lastDragged = draggable;
+                            InitDrag();
+                        }
+                    }
                 }
             }
         }
@@ -76,17 +87,20 @@ public class DragController : MonoBehaviour
 
     void InitDrag()
     {
+        _lastDragged.InitDrag();
         _lastDragged.LastPosition = _lastDragged.transform.position;
         UpdateDragStatus(true);
     }
 
     void Drag()
     {
-        _lastDragged.transform.position = new Vector2(_worldPosition.x, _worldPosition.y);
+        _lastDragged.Drag();
+        _lastDragged.transform.position = new Vector3(_worldPosition.x, _worldPosition.y, 0f);
     }
 
     void Drop()
     {
+        _lastDragged.Drop();
         UpdateDragStatus(false);
     }
 

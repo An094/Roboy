@@ -38,6 +38,7 @@ public class CommandHandler : MonoBehaviour
         m_Statement2 = "Jump";
 
         m_Statement3 = "Walk";
+        //m_Statement3 = "";
     }
 
     // Update is called once per frame
