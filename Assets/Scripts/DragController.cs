@@ -69,6 +69,7 @@ public class DragController : MonoBehaviour
                 {
                     _lastDragged = draggable;
                     InitDrag();
+                    return;
                 }
                 else
                 {
@@ -78,8 +79,20 @@ public class DragController : MonoBehaviour
                         {
                             _lastDragged = draggable;
                             InitDrag();
+                            return;
                         }
                     }
+                }
+
+                Gate gate = hit.transform.gameObject.GetComponent<Gate>();
+                if(gate != null)
+                {
+                    if(gate.IsHoldingFloppy())
+                    {
+                        Debug.Log("Gate");
+                        gate.ReleaseFloppy();
+                    }
+                   
                 }
             }
         }

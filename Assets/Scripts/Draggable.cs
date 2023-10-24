@@ -16,10 +16,11 @@ public class Draggable : MonoBehaviour
 
     [SerializeField] private GameObject floppyDisplay;
 
-    private float _movementTile = 15f;
+    private float _movementTile = 30f;
 
     private System.Nullable<Vector3> _movementDestination;
 
+    private GameObject m_gate;
     //private bool isStayInGate;
     private void Awake()
     {
@@ -30,7 +31,7 @@ public class Draggable : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if(_movementDestination.HasValue)
+        if (_movementDestination.HasValue)
         {
             if (IsDragging)
             {
@@ -40,7 +41,13 @@ public class Draggable : MonoBehaviour
 
             if (transform.position == _movementDestination)
             {
-                _movementDestination = null;
+                Gate gate = m_gate.GetComponent<Gate>();
+                if (gate != null)
+                {
+                    gate.OnFloppyPluged(_floppy);
+                    _movementDestination = null;
+                }
+                
             }
             else /*if(isStayInGate)*/
             {
@@ -58,6 +65,7 @@ public class Draggable : MonoBehaviour
                     if (collision.CompareTag("RedGate"))
                     {
                         _movementDestination = collision.transform.position;
+                        m_gate = collision.gameObject;
                     }
                     
                     break;
@@ -67,6 +75,7 @@ public class Draggable : MonoBehaviour
                     if (collision.CompareTag("GreenGate"))
                     {
                         _movementDestination = collision.transform.position;
+                        m_gate = collision.gameObject;
                     }
                     
                     break;
@@ -76,6 +85,7 @@ public class Draggable : MonoBehaviour
                     if (collision.CompareTag("BlueGate"))
                     {
                         _movementDestination = collision.transform.position;
+                        m_gate = collision.gameObject;
                     }
                     
                     break;
@@ -85,6 +95,45 @@ public class Draggable : MonoBehaviour
         }
 
         
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        switch (_floppy.GetFloppyType())
+        {
+            case FloppyData.FloppyType.Object:
+                {
+                    if (collision.CompareTag("RedGate"))
+                    {
+                        _movementDestination = null;
+                        m_gate = null;
+                    }
+
+                    break;
+                }
+            case FloppyData.FloppyType.Condition:
+                {
+                    if (collision.CompareTag("GreenGate"))
+                    {
+                        _movementDestination = null;
+                        m_gate = null;
+                    }
+
+                    break;
+                }
+            case FloppyData.FloppyType.Statement:
+                {
+                    if (collision.CompareTag("BlueGate"))
+                    {
+                        _movementDestination = null;
+                        m_gate = null;
+                    }
+
+                    break;
+                }
+            default:
+                break;
+        }
     }
 
     public void InitDrag()

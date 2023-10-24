@@ -1,12 +1,24 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using TMPro;
 public class CommandHandler : MonoBehaviour
 {
-    private string m_Command;
     [SerializeField]
     private GameObject m_Player;
+
+
+    [SerializeField] private TMP_Text m_ObjectText1;
+    [SerializeField] private TMP_Text m_ConditionText1;
+    [SerializeField] private TMP_Text m_StatementText1;
+
+    [SerializeField] private TMP_Text m_ObjectText2;
+    [SerializeField] private TMP_Text m_ConditionText2;
+    [SerializeField] private TMP_Text m_StatementText2;
+
+    [SerializeField] private TMP_Text m_StatementText3;
+
+
 
     private PlayerController m_playerController;
 
@@ -28,22 +40,30 @@ public class CommandHandler : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        //m_Command = "Jump";
-        m_Object1 = "Ground";
-        m_Condition1 = "Ahead";
-        m_Statement1 = "Jump";
+        m_Object1 = "";
+        m_Condition1 = "";
+        m_Statement1 = "";
 
-        m_Object2 = "Spikes";
-        m_Condition2 = "Below";
-        m_Statement2 = "Jump";
+        m_Object2 = "";
+        m_Condition2 = "";
+        m_Statement2 = "";
 
-        m_Statement3 = "Walk";
-        //m_Statement3 = "";
+        m_Statement3 = "";
     }
 
     // Update is called once per frame
     void Update()
     {
+        m_Object1 = m_ObjectText1.text;
+        m_Condition1 = m_ConditionText1.text;
+        m_Statement1 = m_StatementText1.text;
+
+        m_Object2 = m_ObjectText2.text;
+        m_Condition2 = m_ConditionText2.text;
+        m_Statement2 = m_StatementText2.text;
+
+        m_Statement3 = m_StatementText3.text;
+
         string statement = null;
         if(m_Object1 != null && m_Condition1 != null && m_playerController.CheckCondition(m_Object1, m_Condition1))
         {

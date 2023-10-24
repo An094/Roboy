@@ -21,4 +21,9 @@ public class Floppy : MonoBehaviour
     {
         return m_data.m_Type;
     }
+
+    public FloppyData GetFloppyData()
+    {
+        return m_data;
+    }
 }

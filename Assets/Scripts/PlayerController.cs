@@ -76,7 +76,7 @@ public class PlayerController : MonoBehaviour
         if(m_Grounded)
         {
             m_Animator.SetTrigger("Jump");
-            Debug.Log("Jump");
+            //Debug.Log("Jump");
             m_rb.AddForce(Vector2.up * m_JumpForce, ForceMode2D.Impulse);
             m_Grounded = false;
         }
