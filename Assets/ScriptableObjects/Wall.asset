@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Wall
   m_EditorClassIdentifier: 
   m_DiskName: Wall
-  m_Sprite: {fileID: 21300000, guid: 0fcd75cd353504a499de53881cfb8e01, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 4424f32b1250d8d4b9481e979490b36c, type: 3}
   m_Type: 0

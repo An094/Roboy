@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Ahead
   m_EditorClassIdentifier: 
   m_DiskName: Ahead
-  m_Sprite: {fileID: 21300000, guid: ed8a6d79e4313154d91e2e2771b60f0d, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 5435a279505a2944a9088366370d1ca5, type: 3}
   m_Type: 1

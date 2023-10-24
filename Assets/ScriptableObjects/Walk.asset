@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Walk
   m_EditorClassIdentifier: 
   m_DiskName: Walk
-  m_Sprite: {fileID: 21300000, guid: 2e6bfd0a33c24b44bbb71a240ebb129f, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 715cafeda374e1840848965a9c6bcb8a, type: 3}
   m_Type: 2
