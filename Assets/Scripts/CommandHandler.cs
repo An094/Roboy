@@ -1,12 +1,20 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using TMPro;
 public class CommandHandler : MonoBehaviour
 {
+    enum SceneType
+    {
+        Menu,
+        Level
+    }
     [SerializeField]
     private GameObject m_Player;
 
+    [SerializeField]
+    private SceneType m_type;
 
     [SerializeField] private TMP_Text m_ObjectText1;
     [SerializeField] private TMP_Text m_ConditionText1;
@@ -54,15 +62,26 @@ public class CommandHandler : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        m_Object1 = m_ObjectText1.text;
-        m_Condition1 = m_ConditionText1.text;
-        m_Statement1 = m_StatementText1.text;
+        if(m_type == SceneType.Menu)
+        {
+            string nextScene = m_StatementText3.text;
+            if (nextScene.Contains("Start"))
+            {
+                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+            }
+            return;
 
-        m_Object2 = m_ObjectText2.text;
-        m_Condition2 = m_ConditionText2.text;
-        m_Statement2 = m_StatementText2.text;
+        }
 
-        m_Statement3 = m_StatementText3.text;
+        m_Object1 = m_ObjectText1 == null? null : m_ObjectText1.text;
+        m_Condition1 = m_ConditionText1 == null? null : m_ConditionText1.text;
+        m_Statement1 = m_Statement1 == null? null : m_StatementText1.text;
+
+        m_Object2 = m_ObjectText2 == null? null : m_ObjectText2.text;
+        m_Condition2 = m_ConditionText2 == null? null : m_ConditionText2.text;
+        m_Statement2 = m_StatementText2 == null? null : m_StatementText2.text;
+
+        m_Statement3 = m_StatementText3 == null? null : m_StatementText3.text;
 
         string statement = null;
         if(m_Object1 != null && m_Condition1 != null && m_playerController.CheckCondition(m_Object1, m_Condition1))
@@ -75,8 +94,10 @@ public class CommandHandler : MonoBehaviour
         }
         else
         {
-            statement = m_Statement3;
+             statement = m_Statement3;
         }
+
+        if (statement == null) return;
 
         if(statement.Contains("Walk"))
         {
@@ -92,5 +113,7 @@ public class CommandHandler : MonoBehaviour
         {
             m_playerController.Flip();
         }
+
+        
     }
 }

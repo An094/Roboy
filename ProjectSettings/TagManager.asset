@@ -8,6 +8,7 @@ TagManager:
   - RedGate
   - BlueGate
   - GreenGate
+  - MenuGate
   layers:
   - Default
   - TransparentFX

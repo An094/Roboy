@@ -62,7 +62,7 @@ public class Draggable : MonoBehaviour
         {
             case FloppyData.FloppyType.Object:
                 {
-                    if (collision.CompareTag("RedGate"))
+                    if (collision.CompareTag("RedGate") || collision.CompareTag("MenuGate"))
                     {
                         _movementDestination = collision.transform.position;
                         m_gate = collision.gameObject;
@@ -72,7 +72,7 @@ public class Draggable : MonoBehaviour
                 }
             case FloppyData.FloppyType.Condition:
                 {
-                    if (collision.CompareTag("GreenGate"))
+                    if (collision.CompareTag("GreenGate") || collision.CompareTag("MenuGate"))
                     {
                         _movementDestination = collision.transform.position;
                         m_gate = collision.gameObject;
@@ -82,7 +82,7 @@ public class Draggable : MonoBehaviour
                 }
             case FloppyData.FloppyType.Statement:
                 {
-                    if (collision.CompareTag("BlueGate"))
+                    if (collision.CompareTag("BlueGate") || collision.CompareTag("MenuGate"))
                     {
                         _movementDestination = collision.transform.position;
                         m_gate = collision.gameObject;
@@ -103,7 +103,7 @@ public class Draggable : MonoBehaviour
         {
             case FloppyData.FloppyType.Object:
                 {
-                    if (collision.CompareTag("RedGate"))
+                    if (collision.CompareTag("RedGate") || collision.CompareTag("MenuGate"))
                     {
                         _movementDestination = null;
                         m_gate = null;
@@ -113,7 +113,7 @@ public class Draggable : MonoBehaviour
                 }
             case FloppyData.FloppyType.Condition:
                 {
-                    if (collision.CompareTag("GreenGate"))
+                    if (collision.CompareTag("GreenGate") || collision.CompareTag("MenuGate"))
                     {
                         _movementDestination = null;
                         m_gate = null;
@@ -123,7 +123,7 @@ public class Draggable : MonoBehaviour
                 }
             case FloppyData.FloppyType.Statement:
                 {
-                    if (collision.CompareTag("BlueGate"))
+                    if (collision.CompareTag("BlueGate") || collision.CompareTag("MenuGate"))
                     {
                         _movementDestination = null;
                         m_gate = null;
