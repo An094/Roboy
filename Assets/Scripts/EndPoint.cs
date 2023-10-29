@@ -10,7 +10,7 @@ public class EndPoint : MonoBehaviour
     {
         if(collision.CompareTag("Player"))
         {
-            StartCoroutine(LoadLevel(SceneManager.GetActiveScene().buildIndex));
+            StartCoroutine(LoadLevel(SceneManager.GetActiveScene().buildIndex + 1));
 
         }
     }
