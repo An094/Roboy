@@ -1,9 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using TMPro;
 
-public class Gate : MonoBehaviour
+public class Gate : MonoBehaviour, IPointerClickHandler
 {
     [SerializeField] private TMP_Text m_text;
     private Floppy m_FloppyPlugedIn;
@@ -44,6 +45,14 @@ public class Gate : MonoBehaviour
             m_text.text = null;
             m_text.enabled = false;
             m_FloppyPlugedIn = null;
+        }
+    }
+
+    public void OnPointerClick(PointerEventData eventData)
+    {
+        if(IsHoldingFloppy())
+        {
+            ReleaseFloppy();
         }
     }
 }
