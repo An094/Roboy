@@ -4,8 +4,13 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 public class EndPoint : MonoBehaviour
 {
-    [SerializeField] private Animator m_PlayerAnimator;
+    [SerializeField] private Animator m_LevelTrasitionrAnimator;
     [SerializeField] private float transitionTime = 1f;
+    [SerializeField] private int m_currentLevel;
+    private void Start()
+    {
+        m_LevelTrasitionrAnimator.SetInteger("Level", m_currentLevel);
+    }
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if(collision.CompareTag("Player"))
@@ -17,7 +22,7 @@ public class EndPoint : MonoBehaviour
 
     IEnumerator LoadLevel(int levelIndex)
     {
-        m_PlayerAnimator.SetTrigger("Start");
+        m_LevelTrasitionrAnimator.SetTrigger("Start");
         yield return new WaitForSeconds(transitionTime);
         SceneManager.LoadScene(levelIndex);
     }

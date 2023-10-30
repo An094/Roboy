@@ -348,7 +348,15 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 1799863035127782693, guid: daac3a32581feb441a3e0221dea2b4ae, type: 3}
+      propertyPath: m_currentLevel
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1799863035127782693, guid: daac3a32581feb441a3e0221dea2b4ae, type: 3}
       propertyPath: m_PlayerAnimator
+      value: 
+      objectReference: {fileID: 1757357125}
+    - target: {fileID: 1799863035127782693, guid: daac3a32581feb441a3e0221dea2b4ae, type: 3}
+      propertyPath: m_LevelTrasitionrAnimator
       value: 
       objectReference: {fileID: 1757357125}
     - target: {fileID: 2864317398620316103, guid: daac3a32581feb441a3e0221dea2b4ae, type: 3}
@@ -2005,6 +2013,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: LevelTransition
       objectReference: {fileID: 0}
+    - target: {fileID: 8504724518562445979, guid: 5d808e4e016903440be0da026467cef2, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2723,6 +2735,6 @@ SceneRoots:
   - {fileID: 603733242}
   - {fileID: 1439411506}
   - {fileID: 1757357124}
-  - {fileID: 533337431}
   - {fileID: 235162932}
   - {fileID: 1827896874}
+  - {fileID: 533337431}

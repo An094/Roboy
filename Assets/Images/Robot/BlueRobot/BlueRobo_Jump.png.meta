@@ -150,8 +150,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0730972fcc0942040a2fa219b205d911
-      internalID: -388715561
+      spriteID: 67893db211fc15745bf9587a9a35ba78
+      internalID: 900592055
       vertices: []
       indices: 
       edges: []
@@ -171,8 +171,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bf9eb23e9e8bb9847a12b10d41c14411
-      internalID: -85470287
+      spriteID: d261b3519965b6e4bbce91eaab111840
+      internalID: -1869625451
       vertices: []
       indices: 
       edges: []
@@ -192,8 +192,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d1f4432b0290d474880f8a5980229db3
-      internalID: 151988257
+      spriteID: dbd4624bc54f4eb4eaa9c2e424a2c507
+      internalID: 1318502433
       vertices: []
       indices: 
       edges: []
@@ -213,8 +213,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bc156de447c045e488d35d919b86e9a3
-      internalID: -1363117774
+      spriteID: a00c15e9c1a975d4ab0090dae74a183d
+      internalID: -218262030
       vertices: []
       indices: 
       edges: []
@@ -234,8 +234,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3f9142808bde25846a654b9ba902f2d5
-      internalID: 784404699
+      spriteID: e20bf6a94a5c0104099a7b5339420a93
+      internalID: 859946625
       vertices: []
       indices: 
       edges: []
@@ -255,8 +255,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 94eb177c85aa4de47a6d70cc1ac66c1b
-      internalID: -1630765705
+      spriteID: ba8273bdce1f3a8409d0cd6ae51f62a1
+      internalID: -1296869547
       vertices: []
       indices: 
       edges: []
@@ -276,8 +276,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a02884b55199229468167a53cc09d677
-      internalID: 89136005
+      spriteID: 5ce3620f378383f438aea0308040fee4
+      internalID: -891821123
       vertices: []
       indices: 
       edges: []
@@ -297,8 +297,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 54a4a2846d73b724488f0836cb40f780
-      internalID: -2018825953
+      spriteID: 51913219542c78242b0b9a45987d5128
+      internalID: 1155848823
       vertices: []
       indices: 
       edges: []
@@ -318,8 +318,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c5db0699288ceac4b9cd02d8dc1b601a
-      internalID: -899888604
+      spriteID: a936117e7ededa34297b44fc62976a68
+      internalID: 2059300065
       vertices: []
       indices: 
       edges: []
@@ -339,8 +339,29 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6a14c789f783378489ac834873169cfc
-      internalID: 829045430
+      spriteID: 2f5704b1f8641db40b9d6e5fde4201ba
+      internalID: -389761776
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlueRobo_Jump_10
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec293d232399ce14282b5fcb82a1ef7e
+      internalID: 1623094870
       vertices: []
       indices: 
       edges: []
@@ -356,16 +377,17 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      BlueRobo_Jump_0: -388715561
-      BlueRobo_Jump_1: -85470287
-      BlueRobo_Jump_2: 151988257
-      BlueRobo_Jump_3: -1363117774
-      BlueRobo_Jump_4: 784404699
-      BlueRobo_Jump_5: -1630765705
-      BlueRobo_Jump_6: 89136005
-      BlueRobo_Jump_7: -2018825953
-      BlueRobo_Jump_8: -899888604
-      BlueRobo_Jump_9: 829045430
+      BlueRobo_Jump_0: 900592055
+      BlueRobo_Jump_1: -1869625451
+      BlueRobo_Jump_10: 1623094870
+      BlueRobo_Jump_2: 1318502433
+      BlueRobo_Jump_3: -218262030
+      BlueRobo_Jump_4: 859946625
+      BlueRobo_Jump_5: -1296869547
+      BlueRobo_Jump_6: -891821123
+      BlueRobo_Jump_7: 1155848823
+      BlueRobo_Jump_8: 2059300065
+      BlueRobo_Jump_9: -389761776
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

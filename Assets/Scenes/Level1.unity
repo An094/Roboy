@@ -273,7 +273,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5833568155223888871, guid: 5d808e4e016903440be0da026467cef2, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.6945141
+      value: -1046
       objectReference: {fileID: 0}
     - target: {fileID: 5833568155223888871, guid: 5d808e4e016903440be0da026467cef2, type: 3}
       propertyPath: m_LocalPosition.z
@@ -307,17 +307,9 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7148978243185895310, guid: 5d808e4e016903440be0da026467cef2, type: 3}
-      propertyPath: m_SortingOrder
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 8504724518562445979, guid: 5d808e4e016903440be0da026467cef2, type: 3}
       propertyPath: m_Name
       value: LevelTransition
-      objectReference: {fileID: 0}
-    - target: {fileID: 8504724518562445979, guid: 5d808e4e016903440be0da026467cef2, type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1028,7 +1020,15 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 1799863035127782693, guid: daac3a32581feb441a3e0221dea2b4ae, type: 3}
+      propertyPath: m_currentLevel
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1799863035127782693, guid: daac3a32581feb441a3e0221dea2b4ae, type: 3}
       propertyPath: m_PlayerAnimator
+      value: 
+      objectReference: {fileID: 213590354}
+    - target: {fileID: 1799863035127782693, guid: daac3a32581feb441a3e0221dea2b4ae, type: 3}
+      propertyPath: m_LevelTrasitionrAnimator
       value: 
       objectReference: {fileID: 213590354}
     - target: {fileID: 2864317398620316103, guid: daac3a32581feb441a3e0221dea2b4ae, type: 3}

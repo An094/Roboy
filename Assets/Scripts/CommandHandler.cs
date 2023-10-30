@@ -97,11 +97,18 @@ public class CommandHandler : MonoBehaviour
              statement = m_Statement3;
         }
 
-        if (statement == null) return;
-
+        if (statement == null)
+        {
+            m_playerController.Idle();
+            return;
+        }
         if(statement.Contains("Walk"))
         {
             m_playerController.Walk();
+        }
+        else
+        {
+            m_playerController.Idle();
         }
 
         if (statement.Contains("Jump") && !m_playerController.IsJumping())

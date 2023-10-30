@@ -36,7 +36,7 @@ public class PlayerController : MonoBehaviour
 
     private bool m_Grounded = true;
 
-    const float k_GroundedRadius = .001f;
+    const float k_GroundedRadius = .01f;
     const float k_CheckPointRadius = .15f;
     // Start is called before the first frame update
     void Start()
@@ -52,6 +52,8 @@ public class PlayerController : MonoBehaviour
 
     private void FixedUpdate()
     {
+
+        bool wasGround = m_Grounded;
         m_Grounded = false;
         Collider2D[] colliders = Physics2D.OverlapCircleAll(m_GroundCheck.position, k_GroundedRadius, m_WhatIsGround);
         for (int i = 0; i < colliders.Length; i++)
@@ -59,7 +61,10 @@ public class PlayerController : MonoBehaviour
             if (colliders[i].gameObject != gameObject)
             {
                 m_Grounded = true;
-
+                if(!wasGround)
+                {
+                    m_Animator.SetBool("Jump", false);
+                }
             }
         }
     }
@@ -71,12 +76,16 @@ public class PlayerController : MonoBehaviour
         transform.position = Vector3.Lerp(transform.position, targetPos, Time.deltaTime * m_Speed);
     }
 
+    public void Idle()
+    {
+        m_Animator.SetFloat("Speed", 0f);
+    }
+
     public void Jump()
     {
         if(m_Grounded)
         {
-            m_Animator.SetTrigger("Jump");
-            //Debug.Log("Jump");
+            m_Animator.SetBool("Jump", true);
             m_rb.AddForce(Vector2.up * m_JumpForce, ForceMode2D.Impulse);
             m_Grounded = false;
         }
