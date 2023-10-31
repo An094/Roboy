@@ -13,11 +13,16 @@ public class LevelSelection : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        UpdateScene();
+    }
+
+    private void UpdateScene()
+    {
         int levelAt = PlayerPrefs.GetInt("levelAt", 2);
 
-        for (int i = 0; i< lvlButtons.Length; ++i)
+        for (int i = 0; i < lvlButtons.Length; ++i)
         {
-            if(i + 2 > levelAt)
+            if (i + 2 > levelAt)
             {
                 lvlButtonsLockedImage[i].enabled = true;
                 lvlButtonsUnlockedImage[i].enabled = false;
@@ -29,11 +34,17 @@ public class LevelSelection : MonoBehaviour
                 lvlButtonsUnlockedImage[i].enabled = true;
                 lvlButtons[i].interactable = true;
             }
-        }    
+        }
     }
 
     public void LoadScene(int index)
     {
         SceneManager.LoadScene(index + 1);
+    }
+
+    public void DeleteData()
+    {
+        PlayerPrefs.DeleteAll();
+        UpdateScene();
     }
 }
