@@ -75,7 +75,7 @@ public class CommandHandler : MonoBehaviour
 
         m_Object1 = m_ObjectText1 == null? null : m_ObjectText1.text;
         m_Condition1 = m_ConditionText1 == null? null : m_ConditionText1.text;
-        m_Statement1 = m_Statement1 == null? null : m_StatementText1.text;
+        m_Statement1 = m_StatementText1 == null? null : m_StatementText1.text;
 
         m_Object2 = m_ObjectText2 == null? null : m_ObjectText2.text;
         m_Condition2 = m_ConditionText2 == null? null : m_ConditionText2.text;
