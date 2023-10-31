@@ -15,6 +15,10 @@ public class EndPoint : MonoBehaviour
     {
         if(collision.CompareTag("Player"))
         {
+            if (m_currentLevel + 2 > PlayerPrefs.GetInt("levelAt"))
+            {
+                PlayerPrefs.SetInt("levelAt", m_currentLevel + 2);
+            }
             StartCoroutine(LoadLevel(SceneManager.GetActiveScene().buildIndex + 1));
 
         }
