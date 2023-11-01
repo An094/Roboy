@@ -47,4 +47,9 @@ public class LevelSelection : MonoBehaviour
         PlayerPrefs.DeleteAll();
         UpdateScene();
     }
+
+    public void CloseLevelSelectionScene()
+    {
+        SceneManager.LoadScene("Menu");
+    }
 }
