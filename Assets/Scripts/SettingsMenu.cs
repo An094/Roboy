@@ -104,11 +104,11 @@ public class SettingsMenu : MonoBehaviour
                 SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
                 break;
             case 1:
-                SceneManager.LoadScene("Menu");
+                SceneManager.LoadScene("LevelSelection");
                 break;
             case 2:
                 //third button
-                Debug.Log("Vibration");
+                SceneManager.LoadScene("Menu");
                 break;
         }
     }
