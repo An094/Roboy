@@ -1134,20 +1134,16 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1799863035127782693, guid: daac3a32581feb441a3e0221dea2b4ae, type: 3}
-      propertyPath: m_PlayerAnimator
-      value: 
-      objectReference: {fileID: 213590354}
-    - target: {fileID: 1799863035127782693, guid: daac3a32581feb441a3e0221dea2b4ae, type: 3}
       propertyPath: m_LevelTrasitionrAnimator
       value: 
       objectReference: {fileID: 213590354}
     - target: {fileID: 2864317398620316103, guid: daac3a32581feb441a3e0221dea2b4ae, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.63
+      value: 2.367
       objectReference: {fileID: 0}
     - target: {fileID: 2864317398620316103, guid: daac3a32581feb441a3e0221dea2b4ae, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.19375393
+      value: 0.512
       objectReference: {fileID: 0}
     - target: {fileID: 2864317398620316103, guid: daac3a32581feb441a3e0221dea2b4ae, type: 3}
       propertyPath: m_LocalPosition.z
