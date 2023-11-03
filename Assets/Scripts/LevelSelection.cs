@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class LevelSelection : MonoBehaviour
 {
+    [SerializeField] private Animator m_animator;
     [SerializeField] private Button[] lvlButtons;
     [SerializeField] private Image[] lvlButtonsLockedImage;
     [SerializeField] private Image[] lvlButtonsUnlockedImage;
@@ -39,7 +40,14 @@ public class LevelSelection : MonoBehaviour
 
     public void LoadScene(int index)
     {
-        SceneManager.LoadScene(index + 1);
+        StartCoroutine(LoadLevel(index + 1));
+    }
+
+    IEnumerator LoadLevel(int levelIndex)
+    {
+        m_animator.SetTrigger("Selected");
+        yield return new WaitForSeconds(0.22f);
+        SceneManager.LoadScene(levelIndex);
     }
 
     public void DeleteData()
