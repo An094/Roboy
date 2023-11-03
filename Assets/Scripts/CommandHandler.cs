@@ -65,9 +65,13 @@ public class CommandHandler : MonoBehaviour
         if(m_type == SceneType.Menu)
         {
             string nextScene = m_StatementText3.text;
-            if (nextScene.Contains("Start"))
+            if (nextScene.Contains("Play"))
             {
                 SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+            }
+            else if(nextScene.Contains("Quit"))
+            {
+                Application.Quit();
             }
             return;
 

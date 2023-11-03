@@ -58,6 +58,6 @@ public class LevelSelection : MonoBehaviour
 
     public void CloseLevelSelectionScene()
     {
-        SceneManager.LoadScene("Menu");
+        StartCoroutine(LoadLevel(0));
     }
 }
