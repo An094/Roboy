@@ -47,7 +47,7 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        m_Animator.SetFloat("Velocity", m_rb.velocity.y);
     }
 
     private void FixedUpdate()
@@ -85,6 +85,7 @@ public class PlayerController : MonoBehaviour
     {
         if(m_Grounded)
         {
+            Debug.Log("Jump");
             m_Animator.SetBool("Jump", true);
             m_rb.AddForce(Vector2.up * m_JumpForce, ForceMode2D.Impulse);
             m_Grounded = false;
@@ -142,17 +143,17 @@ public class PlayerController : MonoBehaviour
     {
         if (obj == "Ground")
         {
-            return Physics2D.OverlapCircle(m_BelowCheckPoint.position, k_CheckPointRadius, m_WhatIsGround);
+            return Physics2D.OverlapCircle(m_GroundCheck.position, k_CheckPointRadius, m_WhatIsGround);
         }
         else if (obj == "Spikes")
         {
-            return Physics2D.OverlapCircle(m_BelowCheckPoint.position, k_CheckPointRadius, m_WhatIsSpikes);
+            return Physics2D.OverlapCircle(m_GroundCheck.position, k_CheckPointRadius, m_WhatIsSpikes);
         }
         return false;
     } 
     
     public bool IsJumping()
     {
-        return !m_Grounded;
+        return !m_Grounded || m_rb.velocity.y > 0f;
     }
 }
