@@ -7990,7 +7990,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2453384916294065996, guid: 8bd03a5e004693144bdb203976b19ed3, type: 3}
       propertyPath: m_JumpForce
-      value: 7
+      value: 4.5
       objectReference: {fileID: 0}
     - target: {fileID: 3898371130324165865, guid: 8bd03a5e004693144bdb203976b19ed3, type: 3}
       propertyPath: m_Size.y

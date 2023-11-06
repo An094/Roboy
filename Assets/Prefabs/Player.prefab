@@ -143,7 +143,7 @@ SpriteRenderer:
   m_SortingLayerID: 671558413
   m_SortingLayer: 4
   m_SortingOrder: 0
-  m_Sprite: {fileID: 848929125, guid: 547befb42ffedcc459bc98cd7f1caa08, type: 3}
+  m_Sprite: {fileID: -868981716, guid: 6cf0c1ecc33c5bd458b7b530b206c622, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -190,7 +190,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0.5
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -227,7 +227,7 @@ MonoBehaviour:
   m_BehindCheckPoint: {fileID: 5862655446178651301}
   m_BelowCheckPoint: {fileID: 6342194150346131883}
   m_Speed: 1.5
-  m_JumpForce: 5.5
+  m_JumpForce: 4.5
 --- !u!70 &3898371130324165865
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
