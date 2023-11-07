@@ -219,14 +219,14 @@ MonoBehaviour:
   m_WhatIsGround:
     serializedVersion: 2
     m_Bits: 128
-  m_WhatIsSpikes:
+  m_WhatIsTrap:
     serializedVersion: 2
-    m_Bits: 256
+    m_Bits: 0
   m_GroundCheck: {fileID: 2774937763267042450}
   m_AheadCheckPoint: {fileID: 7506665122457154675}
   m_BehindCheckPoint: {fileID: 5862655446178651301}
   m_BelowCheckPoint: {fileID: 6342194150346131883}
-  m_Speed: 1.5
+  m_Speed: 1.3
   m_JumpForce: 4.5
 --- !u!70 &3898371130324165865
 CapsuleCollider2D:

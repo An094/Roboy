@@ -14,7 +14,7 @@ public class PlayerController : MonoBehaviour
     private LayerMask m_WhatIsGround;
 
     [SerializeField]
-    private LayerMask m_WhatIsSpikes;
+    private LayerMask m_WhatIsTrap;
 
     [SerializeField]
     private Transform m_GroundCheck;
@@ -133,9 +133,9 @@ public class PlayerController : MonoBehaviour
         {
             return Physics2D.OverlapCircle(m_AheadCheckPoint.position, k_CheckPointRadius, m_WhatIsGround);
         }
-        else if(obj == "Spikes")
+        else if(obj == "Trap")
         {
-            return Physics2D.OverlapCircle(m_AheadCheckPoint.position, k_CheckPointRadius, m_WhatIsSpikes);
+            return Physics2D.OverlapCircle(m_AheadCheckPoint.position, k_CheckPointRadius, m_WhatIsTrap);
         }
         return false;
     }
@@ -146,9 +146,9 @@ public class PlayerController : MonoBehaviour
         {
             return Physics2D.OverlapCircle(m_GroundCheck.position, k_CheckPointRadius, m_WhatIsGround);
         }
-        else if (obj == "Spikes")
+        else if (obj == "Trap")
         {
-            return Physics2D.OverlapCircle(m_GroundCheck.position, k_CheckPointRadius, m_WhatIsSpikes);
+            return Physics2D.OverlapCircle(m_GroundCheck.position, k_CheckPointRadius, m_WhatIsTrap);
         }
         return false;
     } 
