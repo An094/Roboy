@@ -47,7 +47,8 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        m_Animator.SetFloat("Velocity", m_rb.velocity.y);
+        //m_Animator.SetFloat("Velocity", m_rb.velocity.y);
+        m_Animator.SetBool("isJumping", !m_Grounded);
     }
 
     private void FixedUpdate()
@@ -63,7 +64,7 @@ public class PlayerController : MonoBehaviour
                 m_Grounded = true;
                 if(!wasGround)
                 {
-                    m_Animator.SetBool("Jump", false);
+                    m_Animator.SetTrigger("Land");
                 }
             }
         }
@@ -86,7 +87,7 @@ public class PlayerController : MonoBehaviour
         if(m_Grounded)
         {
             Debug.Log("Jump");
-            m_Animator.SetBool("Jump", true);
+            m_Animator.SetTrigger("TakeOf");
             m_rb.AddForce(Vector2.up * m_JumpForce, ForceMode2D.Impulse);
             m_Grounded = false;
         }

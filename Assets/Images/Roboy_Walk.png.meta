@@ -150,8 +150,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4c060cde815cd6f4fa14c21200d5a27a
-      internalID: 2057882551
+      spriteID: 3faa3d3c764fe9047a4d439edba01606
+      internalID: 200464982
       vertices: []
       indices: 
       edges: []
@@ -171,8 +171,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ca7d5a03dac3af0408710b9a998eb3fa
-      internalID: 1751655968
+      spriteID: 5408770b39fc5794790e7b979edc7c1f
+      internalID: -29217872
       vertices: []
       indices: 
       edges: []
@@ -192,8 +192,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bf129efb7cf515245be24b8207db5bf5
-      internalID: -1556054599
+      spriteID: 33893e5a298a4404d8e81cd6d0756af2
+      internalID: 853358673
       vertices: []
       indices: 
       edges: []
@@ -213,8 +213,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c1ec9ab34b5d08c4eaaf051f1f6d42ec
-      internalID: -1125155921
+      spriteID: dcdb5ee6ddbf3e144beca76585b45ca9
+      internalID: 706496648
       vertices: []
       indices: 
       edges: []
@@ -234,8 +234,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b5504cec6743ef345a3097fdf0f6fd5f
-      internalID: 1358657471
+      spriteID: af07370f688e2be4f9d3ca98cd4a7fe7
+      internalID: 1645388195
       vertices: []
       indices: 
       edges: []
@@ -255,8 +255,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 74b40ac2b5ef60349ae4bf0bbde7456d
-      internalID: 784917390
+      spriteID: ca2c0fa165c305848a10e49406c4c517
+      internalID: 1136178594
       vertices: []
       indices: 
       edges: []
@@ -272,12 +272,12 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Roboy_Walk_0: 2057882551
-      Roboy_Walk_1: 1751655968
-      Roboy_Walk_2: -1556054599
-      Roboy_Walk_3: -1125155921
-      Roboy_Walk_4: 1358657471
-      Roboy_Walk_5: 784917390
+      Roboy_Walk_0: 200464982
+      Roboy_Walk_1: -29217872
+      Roboy_Walk_2: 853358673
+      Roboy_Walk_3: 706496648
+      Roboy_Walk_4: 1645388195
+      Roboy_Walk_5: 1136178594
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
