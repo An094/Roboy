@@ -8329,6 +8329,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Trap (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 4045553936021508711, guid: 0224f564913eae543b7eedafd62e1adc, type: 3}
+      propertyPath: m_playerAnimator
+      value: 
+      objectReference: {fileID: 1825320680}
     - target: {fileID: 6122180885562087223, guid: 0224f564913eae543b7eedafd62e1adc, type: 3}
       propertyPath: m_LocalPosition.x
       value: 27.514
@@ -13387,6 +13391,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Trap (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 4045553936021508711, guid: 0224f564913eae543b7eedafd62e1adc, type: 3}
+      propertyPath: m_playerAnimator
+      value: 
+      objectReference: {fileID: 1825320680}
     - target: {fileID: 6122180885562087223, guid: 0224f564913eae543b7eedafd62e1adc, type: 3}
       propertyPath: m_LocalPosition.x
       value: 21.499
@@ -14284,6 +14292,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Trap (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 4045553936021508711, guid: 0224f564913eae543b7eedafd62e1adc, type: 3}
+      propertyPath: m_playerAnimator
+      value: 
+      objectReference: {fileID: 1825320680}
     - target: {fileID: 6122180885562087223, guid: 0224f564913eae543b7eedafd62e1adc, type: 3}
       propertyPath: m_LocalPosition.x
       value: 26.51
@@ -14526,6 +14538,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6801313500857536304, guid: 8bd03a5e004693144bdb203976b19ed3, type: 3}
   m_PrefabInstance: {fileID: 5926667466242828773}
   m_PrefabAsset: {fileID: 0}
+--- !u!95 &1825320680 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 4348367229191147328, guid: 8bd03a5e004693144bdb203976b19ed3, type: 3}
+  m_PrefabInstance: {fileID: 5926667466242828773}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1852860767
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14652,6 +14669,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Trap (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 4045553936021508711, guid: 0224f564913eae543b7eedafd62e1adc, type: 3}
+      propertyPath: m_playerAnimator
+      value: 
+      objectReference: {fileID: 1825320680}
     - target: {fileID: 6122180885562087223, guid: 0224f564913eae543b7eedafd62e1adc, type: 3}
       propertyPath: m_LocalPosition.x
       value: 20.495
@@ -15214,6 +15235,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Trap (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 4045553936021508711, guid: 0224f564913eae543b7eedafd62e1adc, type: 3}
+      propertyPath: m_playerAnimator
+      value: 
+      objectReference: {fileID: 1825320680}
     - target: {fileID: 6122180885562087223, guid: 0224f564913eae543b7eedafd62e1adc, type: 3}
       propertyPath: m_LocalPosition.x
       value: 15.43
@@ -16242,6 +16267,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Trap
       objectReference: {fileID: 0}
+    - target: {fileID: 4045553936021508711, guid: 0224f564913eae543b7eedafd62e1adc, type: 3}
+      propertyPath: m_playerAnimator
+      value: 
+      objectReference: {fileID: 1825320680}
     - target: {fileID: 6122180885562087223, guid: 0224f564913eae543b7eedafd62e1adc, type: 3}
       propertyPath: m_LocalPosition.x
       value: 9.505

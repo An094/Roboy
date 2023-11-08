@@ -9,8 +9,22 @@ public class DraggableFloppy : MonoBehaviour, IBeginDragHandler, IDragHandler, I
 
     [SerializeField] private Transform m_floppyDisplay;
 
-    [HideInInspector] public GameObject m_gate;
-
+    [HideInInspector]
+    public GameObject m_gate;
+    //{
+    //    get { return m_gate; }
+    //    set
+    //    {
+    //        if (value != null)
+    //        {
+    //            Gate gate = value.GetComponent<Gate>();
+    //            if (gate != null)
+    //            {
+    //                gate.OnFloppyPluged(m_floppy);
+    //            }
+    //        }
+    //    }
+    //}
     private Floppy m_floppy;
 
     private void Awake()
