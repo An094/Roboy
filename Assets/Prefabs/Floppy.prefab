@@ -92,7 +92,7 @@ GameObject:
   - component: {fileID: 174558197872922349}
   m_Layer: 5
   m_Name: Floppy
-  m_TagString: BlueGate
+  m_TagString: Floppy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

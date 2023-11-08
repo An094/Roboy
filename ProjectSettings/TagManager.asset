@@ -9,6 +9,7 @@ TagManager:
   - BlueGate
   - GreenGate
   - MenuGate
+  - Floppy
   layers:
   - Default
   - TransparentFX
