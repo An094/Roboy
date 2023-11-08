@@ -46,7 +46,7 @@ public class LevelSelection : MonoBehaviour
     IEnumerator LoadLevel(int levelIndex)
     {
         m_animator.SetTrigger("Selected");
-        yield return new WaitForSeconds(0.22f);
+        yield return new WaitForSeconds(0.25f);
         SceneManager.LoadScene(levelIndex);
     }
 

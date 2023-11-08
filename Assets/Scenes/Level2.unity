@@ -16515,30 +16515,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 2083347139047083197, guid: 8bd03a5e004693144bdb203976b19ed3, type: 3}
-      propertyPath: m_GravityScale
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 2453384916294065996, guid: 8bd03a5e004693144bdb203976b19ed3, type: 3}
-      propertyPath: m_JumpForce
-      value: 4.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 2453384916294065996, guid: 8bd03a5e004693144bdb203976b19ed3, type: 3}
-      propertyPath: m_WhatIsTrap.m_Bits
-      value: 256
-      objectReference: {fileID: 0}
-    - target: {fileID: 3898371130324165865, guid: 8bd03a5e004693144bdb203976b19ed3, type: 3}
-      propertyPath: m_Size.y
-      value: 0.87249744
-      objectReference: {fileID: 0}
-    - target: {fileID: 3898371130324165865, guid: 8bd03a5e004693144bdb203976b19ed3, type: 3}
-      propertyPath: m_Offset.y
-      value: -0.06184143
-      objectReference: {fileID: 0}
-    - target: {fileID: 3898371130324165865, guid: 8bd03a5e004693144bdb203976b19ed3, type: 3}
-      propertyPath: m_IsTrigger
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 4913190856224516846, guid: 8bd03a5e004693144bdb203976b19ed3, type: 3}
       propertyPath: m_Name
       value: Player

@@ -8,7 +8,10 @@ public class PlayerController : MonoBehaviour
     private Animator m_Animator;
 
     [SerializeField]
-    private Rigidbody2D m_rb;
+    public Rigidbody2D m_rb;
+
+    [SerializeField]
+    private ParticleController m_particleController;
 
     [SerializeField]
     private LayerMask m_WhatIsGround;
@@ -38,6 +41,8 @@ public class PlayerController : MonoBehaviour
 
     const float k_GroundedRadius = .01f;
     const float k_CheckPointRadius = .15f;
+
+    public float deltaMovement = 0f;
     // Start is called before the first frame update
     void Start()
     {
@@ -65,6 +70,7 @@ public class PlayerController : MonoBehaviour
                 if(!wasGround)
                 {
                     m_Animator.SetTrigger("Land");
+                    m_particleController.PlayLandingEffect();
                 }
             }
         }
@@ -74,11 +80,14 @@ public class PlayerController : MonoBehaviour
     {
         m_Animator.SetFloat("Speed", m_Speed);
         Vector3 targetPos = transform.position + transform.right * transform.localScale.x;
+        deltaMovement = transform.localScale.x;
         transform.position = Vector3.Lerp(transform.position, targetPos, Time.deltaTime * m_Speed);
+ 
     }
 
     public void Idle()
     {
+        deltaMovement = 0f;
         m_Animator.SetFloat("Speed", 0f);
     }
 
@@ -86,6 +95,7 @@ public class PlayerController : MonoBehaviour
     {
         if(m_Grounded)
         {
+            m_particleController.PlayLandingEffect();
             Debug.Log("Jump");
             m_Animator.SetTrigger("TakeOf");
             m_rb.AddForce(Vector2.up * m_JumpForce, ForceMode2D.Impulse);
