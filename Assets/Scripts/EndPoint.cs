@@ -6,10 +6,12 @@ public class EndPoint : MonoBehaviour
 {
     [SerializeField] private Animator m_LevelTrasitionrAnimator;
     [SerializeField] private float transitionTime = 1f;
+    [SerializeField] private int m_transitionLevel;
     [SerializeField] private int m_currentLevel;
+    [SerializeField] private string nextLevel;
     private void Start()
     {
-        m_LevelTrasitionrAnimator.SetInteger("Level", m_currentLevel);
+        m_LevelTrasitionrAnimator.SetInteger("Level", m_transitionLevel);
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -19,7 +21,7 @@ public class EndPoint : MonoBehaviour
             {
                 PlayerPrefs.SetInt("levelAt", m_currentLevel + 2);
             }
-            StartCoroutine(LoadLevel(SceneManager.GetActiveScene().buildIndex + 1));
+            StartCoroutine(LoadLevel(nextLevel));
 
         }
     }
@@ -29,5 +31,12 @@ public class EndPoint : MonoBehaviour
         m_LevelTrasitionrAnimator.SetTrigger("Start");
         yield return new WaitForSeconds(transitionTime);
         SceneManager.LoadScene(levelIndex);
+    }
+
+    IEnumerator LoadLevel(string nextLevel)
+    {
+        m_LevelTrasitionrAnimator.SetTrigger("Start");
+        yield return new WaitForSeconds(transitionTime);
+        SceneManager.LoadScene(nextLevel);
     }
 }
