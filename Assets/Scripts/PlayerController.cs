@@ -119,21 +119,17 @@ public class PlayerController : MonoBehaviour
             case "Ahead":
                 {
                     return CheckAhead(obj);
-                    break;
                 }
             case "Below":
                 {
                     return CheckBelow(obj);
-                    break;
                 }
             case "Behind":
                 {
                     return true;
-                    break;
                 }
             default:
                 return false;
-                break;
         }
     }
 

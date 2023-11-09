@@ -2598,6 +2598,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6896044783491495207, guid: 8bd03a5e004693144bdb203976b19ed3, type: 3}
+      propertyPath: occurAfterVelocity
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6896044783491495207, guid: 8bd03a5e004693144bdb203976b19ed3, type: 3}
+      propertyPath: dustFormationPeriod
+      value: 0.25
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

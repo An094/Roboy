@@ -11,7 +11,7 @@ public class ParticleController : MonoBehaviour
     [Range(0, 10)]
     [SerializeField] int occurAfterVelocity;
 
-    [Range(0, 0.2f)]
+    [Range(0, 0.5f)]
     [SerializeField] float dustFormationPeriod;
 
     [SerializeField] PlayerController playerController;

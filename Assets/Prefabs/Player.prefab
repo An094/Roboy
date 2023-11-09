@@ -5158,8 +5158,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.019029379, y: -0.06184143}
-  m_Size: {x: 0.5889697, y: 0.87249744}
+  m_Offset: {x: -0.019029379, y: -0.08193636}
+  m_Size: {x: 0.5889697, y: 0.8323076}
   m_Direction: 0
 --- !u!1 &6383455507419004839
 GameObject:
@@ -5210,7 +5210,7 @@ MonoBehaviour:
   movementParticle: {fileID: 6727004134063361165}
   landingParticle: {fileID: 453751729896150922}
   occurAfterVelocity: 4
-  dustFormationPeriod: 0.1
+  dustFormationPeriod: 0.25
   playerController: {fileID: 2453384916294065996}
 --- !u!1 &7021684331318439813
 GameObject:
@@ -6281,7 +6281,7 @@ ParticleSystem:
     curve:
       serializedVersion: 2
       minMaxState: 2
-      scalar: 1
+      scalar: 0.5
       minScalar: 1
       maxCurve:
         serializedVersion: 2
