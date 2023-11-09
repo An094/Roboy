@@ -4970,7 +4970,9 @@ GameObject:
   - component: {fileID: 4348367229191147328}
   - component: {fileID: 2083347139047083197}
   - component: {fileID: 2453384916294065996}
-  - component: {fileID: 3898371130324165865}
+  - component: {fileID: 341912509349198062}
+  - component: {fileID: 1192228415464307772}
+  - component: {fileID: 3551375529637788908}
   m_Layer: 9
   m_Name: Player
   m_TagString: Player
@@ -5018,7 +5020,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -5126,8 +5128,8 @@ MonoBehaviour:
   m_Speed: 1.3
   m_JumpForce: 4.5
   deltaMovement: 0
---- !u!70 &3898371130324165865
-CapsuleCollider2D:
+--- !u!58 &341912509349198062
+CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -5158,9 +5160,100 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.019029379, y: -0.08193636}
-  m_Size: {x: 0.5889697, y: 0.8323076}
-  m_Direction: 0
+  m_Offset: {x: 0.008951306, y: -0.3296075}
+  serializedVersion: 2
+  m_Radius: 0.16022205
+--- !u!61 &1192228415464307772
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4913190856224516846}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.044827104, y: 0.08192545}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.41570115, y: 0.50226414}
+  m_EdgeRadius: 0
+--- !u!114 &3551375529637788908
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4913190856224516846}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7db70e0ea77f5ac47a8f4565a9406397, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ShadowGroup: 0
+  m_ComponentVersion: 1
+  m_HasRenderer: 1
+  m_UseRendererSilhouette: 1
+  m_CastsShadows: 1
+  m_SelfShadows: 0
+  m_ApplyToSortingLayers: 00000000e9543926a1875644dd0b2ca70d2b0728adedb5c347fac1f9
+  m_ShapePath:
+  - {x: -0.036310673, y: -0.508546, z: 0}
+  - {x: -0.09892917, y: -0.46991223, z: 0}
+  - {x: -0.14221072, y: -0.41735625, z: 0}
+  - {x: -0.16092205, y: -0.34481722, z: 0}
+  - {x: -0.15457654, y: -0.28132904, z: 0}
+  - {x: -0.118920565, y: -0.22298762, z: 0}
+  - {x: -0.06801391, y: -0.1793086, z: 0}
+  - {x: -0.12675285, y: -0.07419667, z: 0}
+  - {x: -0.3058493, y: -0.07333428, z: 0}
+  - {x: -0.31070805, y: 0.3076167, z: 0}
+  - {x: 0.24633765, y: 0.3083452, z: 0}
+  - {x: 0.25002432, y: -0.084971726, z: 0}
+  - {x: 0.10511184, y: -0.08347124, z: 0}
+  - {x: 0.07727313, y: -0.18279776, z: 0}
+  - {x: 0.12984395, y: -0.21949846, z: 0}
+  - {x: 0.1700337, y: -0.26896292, z: 0}
+  - {x: 0.18110514, y: -0.34917876, z: 0}
+  - {x: 0.15766764, y: -0.41735625, z: 0}
+  - {x: 0.117477894, y: -0.46991223, z: 0}
+  - {x: 0.061584473, y: -0.5089104, z: 0}
+  m_ShapePathHash: 958478337
+  m_Mesh: {fileID: 0}
+  m_InstanceId: 130104
+  m_LocalBounds:
+    m_Center: {x: -0.030341864, y: -0.10028261, z: 0}
+    m_Extent: {x: 0.28036618, y: 0.4086278, z: 0}
 --- !u!1 &6383455507419004839
 GameObject:
   m_ObjectHideFlags: 0
