@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 20f94e3835d639d4eb43b9fcaa921c39
+guid: ce4dc3dd09feb9c47be760b99463e8ba
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -48,7 +48,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 32
+  spritePixelsToUnits: 64
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -136,13 +136,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Opening (46x56)_0
+      name: RoboyDoorIn_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 46
-        height: 56
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -150,20 +150,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ee331d107eba9d64c83801487dc855a8
-      internalID: 149254698
+      spriteID: e4df575afd28bde4a9982c2222fde7f0
+      internalID: 908318049
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Opening (46x56)_1
+      name: RoboyDoorIn_1
       rect:
         serializedVersion: 2
-        x: 46
+        x: 64
         y: 0
-        width: 46
-        height: 56
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -171,20 +171,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9ea9cf7611279744e8d29e35383fa19f
-      internalID: -1611863759
+      spriteID: 4b46f7f90121f934a9849f839d2498e0
+      internalID: 187497471
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Opening (46x56)_2
+      name: RoboyDoorIn_2
       rect:
         serializedVersion: 2
-        x: 92
+        x: 128
         y: 0
-        width: 46
-        height: 56
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -192,20 +192,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2a907702a199e584097ca883379ebb7a
-      internalID: 385121795
+      spriteID: 77bc4576bc2213f4e9120486a3ec358e
+      internalID: -2004338820
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Opening (46x56)_3
+      name: RoboyDoorIn_3
       rect:
         serializedVersion: 2
-        x: 138
+        x: 192
         y: 0
-        width: 46
-        height: 56
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -213,20 +213,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d68d844be37da924699cd7ce53307e77
-      internalID: 1659775884
+      spriteID: 5cf7901c87b047141843562390658a70
+      internalID: -332477091
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Opening (46x56)_4
+      name: RoboyDoorIn_4
       rect:
         serializedVersion: 2
-        x: 184
+        x: 256
         y: 0
-        width: 46
-        height: 56
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -234,8 +234,155 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: abb093f6b6054184bba737dd8fb293ab
-      internalID: 1685348766
+      spriteID: 0bd82845c2c410240b430316fd3b18a2
+      internalID: -2066806733
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoboyDoorIn_5
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac42ceb13f79f064b84a237b6561b06b
+      internalID: 999336744
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoboyDoorIn_6
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 44ea3dfda244beb4a808dc9d974519a4
+      internalID: 1848267173
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoboyDoorIn_7
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e34911a055d26334bbda6aa0ef946030
+      internalID: -576002558
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoboyDoorIn_8
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 22166ceb9f1301a419f0903125dabf8d
+      internalID: -1537498196
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoboyDoorIn_9
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d076e49e9f89f334bb1268a4ce47cdf6
+      internalID: 638757443
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoboyDoorIn_10
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e21afa6d361697846a89261e9e310bab
+      internalID: -854050110
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoboyDoorIn_11
+      rect:
+        serializedVersion: 2
+        x: 704
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b99b1ec29e3a994c99ed0dfa5690f3d
+      internalID: 138363935
       vertices: []
       indices: 
       edges: []
@@ -251,11 +398,18 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Opening (46x56)_0: 149254698
-      Opening (46x56)_1: -1611863759
-      Opening (46x56)_2: 385121795
-      Opening (46x56)_3: 1659775884
-      Opening (46x56)_4: 1685348766
+      RoboyDoorIn_0: 908318049
+      RoboyDoorIn_1: 187497471
+      RoboyDoorIn_10: -854050110
+      RoboyDoorIn_11: 138363935
+      RoboyDoorIn_2: -2004338820
+      RoboyDoorIn_3: -332477091
+      RoboyDoorIn_4: -2066806733
+      RoboyDoorIn_5: 999336744
+      RoboyDoorIn_6: 1848267173
+      RoboyDoorIn_7: -576002558
+      RoboyDoorIn_8: -1537498196
+      RoboyDoorIn_9: 638757443
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

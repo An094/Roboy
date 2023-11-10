@@ -9,6 +9,8 @@ public class EndPoint : MonoBehaviour
     [SerializeField] private int m_transitionLevel;
     [SerializeField] private int m_currentLevel;
     [SerializeField] private string nextLevel;
+    [SerializeField] private Animator m_endpointAnimator;
+    [SerializeField] private PlayerController m_player;
     private void Start()
     {
         m_LevelTrasitionrAnimator.SetInteger("Level", m_transitionLevel);
@@ -21,6 +23,8 @@ public class EndPoint : MonoBehaviour
             {
                 PlayerPrefs.SetInt("levelAt", m_currentLevel + 2);
             }
+
+
             StartCoroutine(LoadLevel(nextLevel));
 
         }
@@ -28,6 +32,10 @@ public class EndPoint : MonoBehaviour
 
     IEnumerator LoadLevel(int levelIndex)
     {
+        m_endpointAnimator.SetTrigger("Open");
+        yield return new WaitForSeconds(transitionTime);
+        m_player.DoorIn();
+        yield return new WaitForSeconds(transitionTime);
         m_LevelTrasitionrAnimator.SetTrigger("Start");
         yield return new WaitForSeconds(transitionTime);
         SceneManager.LoadScene(levelIndex);
@@ -35,6 +43,10 @@ public class EndPoint : MonoBehaviour
 
     IEnumerator LoadLevel(string nextLevel)
     {
+        m_endpointAnimator.SetTrigger("Open");
+        yield return new WaitForSeconds(transitionTime);
+        m_player.DoorIn();
+        yield return new WaitForSeconds(1.8f);
         m_LevelTrasitionrAnimator.SetTrigger("Start");
         yield return new WaitForSeconds(transitionTime);
         SceneManager.LoadScene(nextLevel);

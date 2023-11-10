@@ -43,6 +43,8 @@ public class PlayerController : MonoBehaviour
     const float k_CheckPointRadius = .15f;
 
     public float deltaMovement = 0f;
+
+    private bool CanMove = true;
     // Start is called before the first frame update
     void Start()
     {
@@ -78,6 +80,7 @@ public class PlayerController : MonoBehaviour
 
     public void Walk()
     {
+        if (!CanMove) return;
         m_Animator.SetFloat("Speed", m_Speed);
         Vector3 targetPos = transform.position + transform.right * transform.localScale.x;
         deltaMovement = transform.localScale.x;
@@ -110,6 +113,12 @@ public class PlayerController : MonoBehaviour
         Vector3 theScale = transform.localScale;
         theScale.x *= -1;
         transform.localScale = theScale;
+    }
+
+    public void DoorIn()
+    {
+        CanMove = false;
+        m_Animator.SetTrigger("DoorIn");
     }
 
     public bool CheckCondition(string obj, string condition)
