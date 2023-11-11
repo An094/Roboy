@@ -82,9 +82,10 @@ public class PlayerController : MonoBehaviour
     {
         if (!CanMove) return;
         m_Animator.SetFloat("Speed", m_Speed);
-        Vector3 targetPos = transform.position + transform.right * transform.localScale.x;
-        deltaMovement = transform.localScale.x;
-        transform.position = Vector3.Lerp(transform.position, targetPos, Time.deltaTime * m_Speed);
+        //Vector3 targetPos = transform.position + transform.right * transform.localScale.x;
+        //deltaMovement = transform.localScale.x;
+        //transform.position = Vector3.Lerp(transform.position, targetPos, Time.deltaTime * m_Speed);
+        m_rb.velocity = new Vector2(m_Speed * Time.deltaTime * transform.localScale.x, m_rb.velocity.y);
  
     }
 
@@ -92,6 +93,7 @@ public class PlayerController : MonoBehaviour
     {
         deltaMovement = 0f;
         m_Animator.SetFloat("Speed", 0f);
+        m_rb.velocity = new Vector2(0, m_rb.velocity.y);
     }
 
     public void Jump()
