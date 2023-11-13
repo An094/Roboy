@@ -5125,7 +5125,7 @@ MonoBehaviour:
   m_AheadCheckPoint: {fileID: 7506665122457154675}
   m_BehindCheckPoint: {fileID: 5862655446178651301}
   m_BelowCheckPoint: {fileID: 6342194150346131883}
-  m_Speed: 50
+  m_Speed: 1
   m_JumpForce: 4.7
   deltaMovement: 0
 --- !u!58 &341912509349198062
@@ -5254,7 +5254,7 @@ MonoBehaviour:
   - {x: 0.061584473, y: -0.5089104, z: 0}
   m_ShapePathHash: -145686615
   m_Mesh: {fileID: 0}
-  m_InstanceId: -1674
+  m_InstanceId: 43994
   m_LocalBounds:
     m_Center: {x: -0.028767347, y: -0.08851969, z: 0}
     m_Extent: {x: 0.28139663, y: 0.42039073, z: 0}
