@@ -44,7 +44,7 @@ public class PlayerController : MonoBehaviour
 
     public float deltaMovement = 0f;
 
-    private bool CanMove = true;
+    private bool IsAlive = true;
     // Start is called before the first frame update
     void Start()
     {
@@ -80,7 +80,7 @@ public class PlayerController : MonoBehaviour
 
     public void Walk()
     {
-        if (!CanMove) return;
+        if (!IsAlive) return;
         m_Animator.SetFloat("Speed", m_Speed);
         //Vector3 targetPos = transform.position + transform.right * transform.localScale.x;
         deltaMovement = transform.localScale.x;
@@ -99,7 +99,8 @@ public class PlayerController : MonoBehaviour
 
     public void Jump()
     {
-        if(m_Grounded)
+        if (!IsAlive) return;
+        if (m_Grounded)
         {
             m_particleController.PlayLandingEffect();
             Debug.Log("Jump");
@@ -118,9 +119,19 @@ public class PlayerController : MonoBehaviour
         transform.localScale = theScale;
     }
 
+    public void Die()
+    {
+        if (!IsAlive) return;
+        IsAlive = false;
+        m_rb.velocity = new Vector2(0, m_rb.velocity.y);
+        m_Animator.SetTrigger("Die");
+    }
+
     public void DoorIn()
     {
-        CanMove = false;
+        if (!IsAlive) return;
+        IsAlive = false;
+        m_rb.velocity = new Vector2(0, m_rb.velocity.y);
         m_Animator.SetTrigger("DoorIn");
     }
 

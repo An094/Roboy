@@ -244,3 +244,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_animator: {fileID: 1225940285663719310}
+  m_playerController: {fileID: 0}
+  m_type: 1
