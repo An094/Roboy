@@ -42,7 +42,6 @@ public class PlayerController : MonoBehaviour
     const float k_GroundedRadius = .01f;
     const float k_CheckPointRadius = .15f;
 
-    public float deltaMovement = 0f;
 
     private bool IsAlive = true;
     // Start is called before the first frame update
@@ -83,7 +82,6 @@ public class PlayerController : MonoBehaviour
         if (!IsAlive) return;
         m_Animator.SetFloat("Speed", m_Speed);
         //Vector3 targetPos = transform.position + transform.right * transform.localScale.x;
-        deltaMovement = transform.localScale.x;
         //transform.position = Vector3.Lerp(transform.position, targetPos, Time.deltaTime * m_Speed);
         m_rb.velocity = new Vector2(m_Speed * transform.localScale.x, m_rb.velocity.y);
         //Debug.Log(m_Speed * Time.deltaTime);
@@ -92,7 +90,6 @@ public class PlayerController : MonoBehaviour
 
     public void Idle()
     {
-        deltaMovement = 0f;
         m_Animator.SetFloat("Speed", 0f);
         m_rb.velocity = new Vector2(0, m_rb.velocity.y);
     }
@@ -127,12 +124,16 @@ public class PlayerController : MonoBehaviour
         m_Animator.SetTrigger("Die");
     }
 
-    public void DoorIn()
+    public IEnumerator DoorIn()
     {
-        if (!IsAlive) return;
-        IsAlive = false;
-        m_rb.velocity = new Vector2(0, m_rb.velocity.y);
-        m_Animator.SetTrigger("DoorIn");
+        if (IsAlive)
+        {
+            IsAlive = false;
+            m_rb.velocity = new Vector2(0, m_rb.velocity.y);
+            yield return new WaitForSeconds(1f);
+            m_Animator.SetTrigger("DoorIn");
+        }
+        
     }
 
     public bool CheckCondition(string obj, string condition)

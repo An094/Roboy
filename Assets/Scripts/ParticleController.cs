@@ -22,7 +22,7 @@ public class ParticleController : MonoBehaviour
     {
         counter += Time.deltaTime;
 
-        if (Mathf.Abs(playerController.deltaMovement) > 0f && Mathf.Abs(playerController.m_rb.velocity.y) == 0)
+        if (Mathf.Abs(playerController.m_rb.velocity.x) > 0f && Mathf.Abs(playerController.m_rb.velocity.y) == 0)
         {
             if (counter > dustFormationPeriod)
             {
