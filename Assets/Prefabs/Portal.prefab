@@ -11,8 +11,8 @@ GameObject:
   - component: {fileID: 7990574342335824851}
   - component: {fileID: 4961413646914488462}
   - component: {fileID: 1692859280506875436}
-  - component: {fileID: 8269709463685613407}
   - component: {fileID: 2613816110627720653}
+  - component: {fileID: 3825190711297078141}
   m_Layer: 0
   m_Name: PortalB
   m_TagString: Untagged
@@ -108,8 +108,21 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!61 &8269709463685613407
-BoxCollider2D:
+--- !u!114 &2613816110627720653
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1496120956666112089}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd8e036bc6a6a2c4889a9d8ba8ba0a54, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  destination: {fileID: 6415349308025986582}
+--- !u!70 &3825190711297078141
+CapsuleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -140,32 +153,9 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.0068073273, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5986842, y: 0.51973677}
-    oldSize: {x: 2, y: 2.0039062}
-    newSize: {x: 10, y: 10.019531}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.99253464, y: 2.0039062}
-  m_EdgeRadius: 0
---- !u!114 &2613816110627720653
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1496120956666112089}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bd8e036bc6a6a2c4889a9d8ba8ba0a54, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  destination: {fileID: 6415349308025986582}
+  m_Offset: {x: -0.2219181, y: -0.021138787}
+  m_Size: {x: 0.8952904, y: 1.7706902}
+  m_Direction: 0
 --- !u!1 &2042637746349365686
 GameObject:
   m_ObjectHideFlags: 0
@@ -210,8 +200,8 @@ GameObject:
   - component: {fileID: 6415349308025986582}
   - component: {fileID: 1164412597159035072}
   - component: {fileID: 2267561889597791504}
-  - component: {fileID: 1285292344395068905}
   - component: {fileID: 8401794022968029368}
+  - component: {fileID: 8694468889000251957}
   m_Layer: 0
   m_Name: PortalA
   m_TagString: Untagged
@@ -307,8 +297,21 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!61 &1285292344395068905
-BoxCollider2D:
+--- !u!114 &8401794022968029368
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3814619481386878964}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd8e036bc6a6a2c4889a9d8ba8ba0a54, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  destination: {fileID: 7990574342335824851}
+--- !u!70 &8694468889000251957
+CapsuleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -339,29 +342,6 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.0068073273, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5986842, y: 0.51973677}
-    oldSize: {x: 2, y: 2.0039062}
-    newSize: {x: 10, y: 10.019531}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.99253464, y: 2.0039062}
-  m_EdgeRadius: 0
---- !u!114 &8401794022968029368
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3814619481386878964}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bd8e036bc6a6a2c4889a9d8ba8ba0a54, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  destination: {fileID: 7990574342335824851}
+  m_Offset: {x: -0.21214294, y: -0.054325223}
+  m_Size: {x: 0.8869858, y: 1.8364608}
+  m_Direction: 0
