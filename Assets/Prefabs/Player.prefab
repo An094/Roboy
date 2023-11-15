@@ -5125,6 +5125,7 @@ MonoBehaviour:
   m_AheadCheckPoint: {fileID: 7506665122457154675}
   m_BehindCheckPoint: {fileID: 5862655446178651301}
   m_BelowCheckPoint: {fileID: 6342194150346131883}
+  m_CrouchDisableCollider: {fileID: 7673076070990295606}
   m_Speed: 1.5
   m_JumpForce: 4.5
 --- !u!114 &3551375529637788908
@@ -5175,7 +5176,7 @@ MonoBehaviour:
   - {x: 0.061584473, y: -0.5089104, z: 0}
   m_ShapePathHash: 1785337961
   m_Mesh: {fileID: 0}
-  m_InstanceId: 143076
+  m_InstanceId: 52186
   m_LocalBounds:
     m_Center: {x: -0.028767347, y: -0.08851969, z: 0}
     m_Extent: {x: 0.28139663, y: 0.42039073, z: 0}

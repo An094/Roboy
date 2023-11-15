@@ -125,6 +125,11 @@ public class CommandHandler : MonoBehaviour
             m_playerController.Flip();
         }
 
-        
+        if (statement.Contains("Crouch") && !m_playerController.IsCrouch)
+        {
+            StartCoroutine(m_playerController.Crouch());
+            Debug.Log("Crouch");
+        }
+
     }
 }

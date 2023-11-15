@@ -32,6 +32,9 @@ public class PlayerController : MonoBehaviour
     private Transform m_BelowCheckPoint;
 
     [SerializeField]
+    private Collider2D m_CrouchDisableCollider;
+
+    [SerializeField]
     private float m_Speed;
 
     [SerializeField]
@@ -44,6 +47,8 @@ public class PlayerController : MonoBehaviour
 
 
     private bool IsAlive = true;
+
+    public bool IsCrouch = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -81,8 +86,10 @@ public class PlayerController : MonoBehaviour
     {
         if (!IsAlive) return;
         m_Animator.SetFloat("Speed", m_Speed);
-        //Vector3 targetPos = transform.position + transform.right * transform.localScale.x;
-        //transform.position = Vector3.Lerp(transform.position, targetPos, Time.deltaTime * m_Speed);
+        //if (m_CrouchDisableCollider != null)
+        //{
+        //    m_CrouchDisableCollider.enabled = true;
+        //}
         m_rb.velocity = new Vector2(m_Speed * transform.localScale.x, m_rb.velocity.y);
         //Debug.Log(m_Speed * Time.deltaTime);
  
@@ -91,6 +98,10 @@ public class PlayerController : MonoBehaviour
     public void Idle()
     {
         m_Animator.SetFloat("Speed", 0f);
+        //if (m_CrouchDisableCollider != null)
+        //{
+        //    m_CrouchDisableCollider.enabled = true;
+        //}
         m_rb.velocity = new Vector2(0, m_rb.velocity.y);
     }
 
@@ -114,6 +125,23 @@ public class PlayerController : MonoBehaviour
         Vector3 theScale = transform.localScale;
         theScale.x *= -1;
         transform.localScale = theScale;
+    }
+
+    public IEnumerator Crouch()
+    {
+        if(m_CrouchDisableCollider != null)
+        {
+            IsCrouch = true;
+            m_CrouchDisableCollider.enabled = false;
+            m_Animator.SetBool("IsCrouch", true);
+            yield return new WaitForSeconds(0.5f);
+            m_Animator.SetTrigger("CrouchEnd");
+            yield return new WaitForSeconds(0.5f);
+            m_Animator.SetBool("IsCrouch", false);
+            m_CrouchDisableCollider.enabled = true;
+            IsCrouch = false;
+        }
+        
     }
 
     public void Die()
