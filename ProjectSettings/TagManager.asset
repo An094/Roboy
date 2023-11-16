@@ -10,6 +10,7 @@ TagManager:
   - GreenGate
   - MenuGate
   - Floppy
+  - Projectile
   layers:
   - Default
   - TransparentFX
@@ -24,8 +25,8 @@ TagManager:
   - FloppyDisk
   - Gate
   - Dragging
-  - 
-  - 
+  - BreakablePlatformerPart
+  - Bullet
   - 
   - 
   - 

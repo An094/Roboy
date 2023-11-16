@@ -18,6 +18,9 @@ public class PlayerController : MonoBehaviour
 
     [SerializeField]
     private LayerMask m_WhatIsTrap;
+    
+    [SerializeField]
+    private LayerMask m_WhatIsBullet;
 
     [SerializeField]
     private Transform m_GroundCheck;
@@ -178,7 +181,7 @@ public class PlayerController : MonoBehaviour
                 }
             case "Behind":
                 {
-                    return true;
+                    return CheckBehind(obj);
                 }
             default:
                 return false;
@@ -195,6 +198,10 @@ public class PlayerController : MonoBehaviour
         {
             return Physics2D.OverlapCircle(m_AheadCheckPoint.position, k_CheckPointRadius, m_WhatIsTrap);
         }
+        else if(obj == "Bullet")
+        {
+            return Physics2D.OverlapCircle(m_AheadCheckPoint.position, k_CheckPointRadius, m_WhatIsBullet);
+        }
         return false;
     }
 
@@ -208,8 +215,29 @@ public class PlayerController : MonoBehaviour
         {
             return Physics2D.OverlapCircle(m_GroundCheck.position, k_CheckPointRadius, m_WhatIsTrap);
         }
+        else if (obj == "Bullet")
+        {
+            return Physics2D.OverlapCircle(m_GroundCheck.position, k_CheckPointRadius, m_WhatIsBullet);
+        }
         return false;
     } 
+
+    public bool CheckBehind(string obj)
+    {
+        if(obj == "Ground")
+        {
+            return Physics2D.OverlapCircle(m_BehindCheckPoint.position, k_CheckPointRadius, m_WhatIsGround);
+        }
+        else if (obj == "Trap")
+        {
+            return Physics2D.OverlapCircle(m_BehindCheckPoint.position, k_CheckPointRadius, m_WhatIsTrap);
+        }
+        else if (obj == "Bullet")
+        {
+            return Physics2D.OverlapCircle(m_BehindCheckPoint.position, k_CheckPointRadius, m_WhatIsBullet);
+        }
+        return false;
+    }
     
     public bool IsJumping()
     {

@@ -5121,6 +5121,9 @@ MonoBehaviour:
   m_WhatIsTrap:
     serializedVersion: 2
     m_Bits: 256
+  m_WhatIsBullet:
+    serializedVersion: 2
+    m_Bits: 16384
   m_GroundCheck: {fileID: 2774937763267042450}
   m_AheadCheckPoint: {fileID: 7506665122457154675}
   m_BehindCheckPoint: {fileID: 5862655446178651301}
@@ -5128,6 +5131,7 @@ MonoBehaviour:
   m_CrouchDisableCollider: {fileID: 7673076070990295606}
   m_Speed: 1.5
   m_JumpForce: 4.5
+  IsCrouch: 0
 --- !u!114 &3551375529637788908
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5176,7 +5180,7 @@ MonoBehaviour:
   - {x: 0.061584473, y: -0.5089104, z: 0}
   m_ShapePathHash: 1785337961
   m_Mesh: {fileID: 0}
-  m_InstanceId: 52186
+  m_InstanceId: 110114
   m_LocalBounds:
     m_Center: {x: -0.028767347, y: -0.08851969, z: 0}
     m_Extent: {x: 0.28139663, y: 0.42039073, z: 0}
