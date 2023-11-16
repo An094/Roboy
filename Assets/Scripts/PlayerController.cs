@@ -52,10 +52,12 @@ public class PlayerController : MonoBehaviour
     private bool IsAlive = true;
 
     public bool IsCrouch = false;
+
+    public Vector3 respawnPosition;
     // Start is called before the first frame update
     void Start()
     {
-        
+        respawnPosition = transform.position;
     }
 
     // Update is called once per frame
@@ -153,6 +155,7 @@ public class PlayerController : MonoBehaviour
         IsAlive = false;
         m_rb.velocity = new Vector2(0, m_rb.velocity.y);
         m_Animator.SetTrigger("Die");
+        StartCoroutine(Respawn());
     }
 
     public IEnumerator DoorIn()
@@ -165,6 +168,14 @@ public class PlayerController : MonoBehaviour
             m_Animator.SetTrigger("DoorIn");
         }
         
+    }
+
+    IEnumerator Respawn()
+    {
+        yield return new WaitForSeconds(2f);
+        transform.position = respawnPosition;
+        IsAlive = true;
+        m_Animator.SetTrigger("Reborn");
     }
 
     public bool CheckCondition(string obj, string condition)
