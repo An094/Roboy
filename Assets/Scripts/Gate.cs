@@ -29,6 +29,7 @@ public class Gate : MonoBehaviour, IPointerClickHandler
             m_text.enabled = true;
             m_text.text = _floppy.GetFloppyData().m_DiskName;
             _floppy.gameObject.SetActive(false);
+            AudioManager.Instance.PlaySFX("Insert");
         }
     }
 
@@ -53,6 +54,7 @@ public class Gate : MonoBehaviour, IPointerClickHandler
         if(IsHoldingFloppy())
         {
             ReleaseFloppy();
+            AudioManager.Instance.PlaySFX("Pickup");
         }
     }
 }

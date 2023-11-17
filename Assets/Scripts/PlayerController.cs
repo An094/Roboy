@@ -115,6 +115,7 @@ public class PlayerController : MonoBehaviour
         if (!IsAlive) return;
         if (m_Grounded)
         {
+            AudioManager.Instance.PlaySFX("Jump");
             m_particleController.PlayLandingEffect();
             Debug.Log("Jump");
             m_Animator.SetTrigger("TakeOf");

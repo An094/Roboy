@@ -68,10 +68,12 @@ public class DraggableFloppy : MonoBehaviour, IBeginDragHandler, IDragHandler, I
     public void OnPointerDown(PointerEventData eventData)
     {
         m_floppyDisplay.position = new Vector2(transform.position.x, transform.position.y + 25);
+        AudioManager.Instance.PlaySFX("Pickup");
     }
 
     public void OnPointerUp(PointerEventData eventData)
     {
         m_floppyDisplay.position = new Vector2(transform.position.x, transform.position.y);
+        AudioManager.Instance.PlaySFX("Drop");
     }
 }

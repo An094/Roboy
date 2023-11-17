@@ -22,24 +22,27 @@ public class Canon : MonoBehaviour
             Debug.Log("Trigger");
             WasTrigger = true;
             CanFire = true;
-        }
-    }
 
-    private void OnTriggerExit2D(Collider2D collision)
-    {
-        if (collision.CompareTag("Player") && WasTrigger)
-        {
-            WasTrigger = false;
-        }
-    }
-
-    private void Update()
-    {
-        if(CanFire)
-        {
             StartCoroutine(Fire());
         }
     }
+
+    //private void OnTriggerExit2D(Collider2D collision)
+    //{
+    //    if (collision.CompareTag("Player") && WasTrigger)
+    //    {
+    //        WasTrigger = false;
+    //        CanFire = false;
+    //    }
+    //}
+
+    //private void Update()
+    //{
+    //    if(CanFire)
+    //    {
+    //        StartCoroutine(Fire());
+    //    }
+    //}
 
     IEnumerator Fire()
     {

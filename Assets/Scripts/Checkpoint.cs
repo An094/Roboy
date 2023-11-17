@@ -5,18 +5,46 @@ using UnityEngine.Rendering.Universal;
 
 public class Checkpoint : MonoBehaviour
 {
-    [SerializeField] private PlayerController m_playerController;
-    [SerializeField] private Animator m_animator;
     [SerializeField] private Transform m_respawnPoint;
-    [SerializeField] private  Light2D light2D;
+    private PlayerController m_playerController;
+    private Animator m_animator;
+    private  Light2D light2D;
     private bool TurnedOn = false;
 
+    enum CheckpointType
+    {
+        Computer,
+        Floppy
+    }
+
+    [SerializeField] private CheckpointType type;
+    private void Awake()
+    {
+        GameObject player = GameObject.FindGameObjectWithTag("Player");
+        if(player != null)
+        {
+            m_playerController = player.GetComponent<PlayerController>();
+        }
+        if (type == CheckpointType.Computer)
+        {
+            m_animator = GetComponent<Animator>();
+            light2D = GetComponent<Light2D>();
+        }
+            
+    }
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if(collision.CompareTag("Player") && !TurnedOn)
         {
             TurnedOn = true;
-            StartCoroutine(TurnOn());
+            if(type == CheckpointType.Computer)
+            {
+                StartCoroutine(TurnOn());
+            }
+            else
+            {
+                m_playerController.respawnPosition = m_respawnPoint.position;
+            }
         }
     }
 
