@@ -66,3 +66,6 @@ TagManager:
   - name: FloppyDisk
     uniqueID: 4190239303
     locked: 0
+  - name: LevelTransition
+    uniqueID: 2737696631
+    locked: 0

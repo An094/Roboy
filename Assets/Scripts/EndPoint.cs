@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 public class EndPoint : MonoBehaviour
 {
-    [SerializeField] private Animator m_LevelTrasitionrAnimator;
+    [SerializeField] private LevelTransition m_LevelTrasition;
     [SerializeField] private float transitionTime = 1f;
     [SerializeField] private int m_transitionLevel;
     [SerializeField] private int m_currentLevel;
@@ -13,7 +13,6 @@ public class EndPoint : MonoBehaviour
     [SerializeField] private PlayerController m_player;
     private void Start()
     {
-        m_LevelTrasitionrAnimator.SetInteger("Level", m_transitionLevel);
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -36,7 +35,7 @@ public class EndPoint : MonoBehaviour
         //yield return new WaitForSeconds(transitionTime);
         StartCoroutine(m_player.DoorIn());
         yield return new WaitForSeconds(2f);
-        m_LevelTrasitionrAnimator.SetTrigger("Start");
+        m_LevelTrasition.OnEnd();
         yield return new WaitForSeconds(transitionTime);
         SceneManager.LoadScene(levelIndex);
     }
@@ -47,7 +46,7 @@ public class EndPoint : MonoBehaviour
         //yield return new WaitForSeconds(transitionTime);
         StartCoroutine(m_player.DoorIn());
         yield return new WaitForSeconds(2f);
-        m_LevelTrasitionrAnimator.SetTrigger("Start");
+        m_LevelTrasition.OnEnd();
         yield return new WaitForSeconds(transitionTime);
         SceneManager.LoadScene(nextLevel);
     }
