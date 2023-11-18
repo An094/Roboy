@@ -901,18 +901,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7840927992537575224, guid: 2db87258295dee34e985add9e7be1537, type: 3}
-      propertyPath: sfxSounds.Array.size
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 7840927992537575224, guid: 2db87258295dee34e985add9e7be1537, type: 3}
-      propertyPath: sfxSounds.Array.data[3].m_clip
-      value: 
-      objectReference: {fileID: 8300000, guid: d11e6554699681341b96640d6e9d1fff, type: 3}
-    - target: {fileID: 7840927992537575224, guid: 2db87258295dee34e985add9e7be1537, type: 3}
-      propertyPath: sfxSounds.Array.data[3].m_name
-      value: Jump
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

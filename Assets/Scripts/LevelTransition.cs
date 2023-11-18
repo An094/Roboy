@@ -40,7 +40,7 @@ public class LevelTransition : MonoBehaviour
         {
             image.rectTransform.DOAnchorPos(targetPos, 1f);
             image.rectTransform.DOScale(new Vector3(1f, 1f, 1f), 1f);
-            image.DOFade(1f, 0.5f);
+            image.DOFade(1f, 0.3f);
 
         };
     }

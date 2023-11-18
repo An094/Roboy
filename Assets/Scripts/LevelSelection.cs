@@ -45,6 +45,7 @@ public class LevelSelection : MonoBehaviour
 
     IEnumerator LoadLevel(int levelIndex)
     {
+        AudioManager.Instance.PlaySFX("MouseClick");
         m_animator.SetTrigger("Selected");
         yield return new WaitForSeconds(0.25f);
         SceneManager.LoadScene(levelIndex);

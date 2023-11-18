@@ -54,6 +54,10 @@ MonoBehaviour:
     m_clip: {fileID: 8300000, guid: 08a88d8131497904da8c4787e408e482, type: 3}
   - m_name: Insert
     m_clip: {fileID: 8300000, guid: 120ec4b80d0b62043ae367b476f2895f, type: 3}
+  - m_name: Jump
+    m_clip: {fileID: 8300000, guid: d11e6554699681341b96640d6e9d1fff, type: 3}
+  - m_name: MouseClick
+    m_clip: {fileID: 8300000, guid: 8b67a1a9fb2929745b8d6891d439c9ab, type: 3}
   musicSource: {fileID: 1039509449192657796}
   sfxSource: {fileID: 4652383416156189528}
 --- !u!1 &4427073596244659024
