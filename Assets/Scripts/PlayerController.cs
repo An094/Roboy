@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class PlayerController : MonoBehaviour
 {
@@ -43,6 +44,15 @@ public class PlayerController : MonoBehaviour
     [SerializeField]
     private float m_JumpForce;
 
+
+    [SerializeField]
+    private GameObject m_DeathFlagPref;
+
+    [SerializeField]
+    private TMP_Text m_text;
+
+    private int DeathCount = 0;
+
     private bool m_Grounded = true;
 
     const float k_GroundedRadius = .01f;
@@ -58,6 +68,7 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         respawnPosition = transform.position;
+        m_text.text = DeathCount.ToString();
     }
 
     // Update is called once per frame
@@ -81,6 +92,7 @@ public class PlayerController : MonoBehaviour
                 if(!wasGround)
                 {
                     m_Animator.SetTrigger("Land");
+                    AudioManager.Instance.PlaySFX("Land");
                     m_particleController.PlayLandingEffect();
                 }
             }
@@ -156,6 +168,9 @@ public class PlayerController : MonoBehaviour
         IsAlive = false;
         m_rb.velocity = new Vector2(0, m_rb.velocity.y);
         m_Animator.SetTrigger("Die");
+        DeathCount++;
+        m_text.text = DeathCount.ToString();
+        Instantiate(m_DeathFlagPref, transform.position, transform.rotation);
         StartCoroutine(Respawn());
     }
 
