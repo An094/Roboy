@@ -65,9 +65,11 @@ public class CommandHandler : MonoBehaviour
         if(m_type == SceneType.Menu)
         {
             string nextScene = m_StatementText3.text;
+            GameObject menuControllerGO = GameObject.FindGameObjectWithTag("MenuController");
+            MenuController menuController = menuControllerGO.GetComponent<MenuController>();
             if (nextScene.Contains("Play"))
             {
-                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+                menuController.Load("LevelSelection");
             }
             else if(nextScene.Contains("Quit"))
             {

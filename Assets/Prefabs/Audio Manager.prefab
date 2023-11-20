@@ -55,11 +55,11 @@ MonoBehaviour:
   - m_name: Insert
     m_clip: {fileID: 8300000, guid: 120ec4b80d0b62043ae367b476f2895f, type: 3}
   - m_name: Jump
-    m_clip: {fileID: 8300000, guid: d11e6554699681341b96640d6e9d1fff, type: 3}
+    m_clip: {fileID: 8300000, guid: b4a1b17f9aff8234b8c40b1c791fb03e, type: 3}
   - m_name: MouseClick
     m_clip: {fileID: 8300000, guid: 8b67a1a9fb2929745b8d6891d439c9ab, type: 3}
   - m_name: Land
-    m_clip: {fileID: 8300000, guid: 5519c866cea30c0438b23dd5847b2ff1, type: 3}
+    m_clip: {fileID: 8300000, guid: ab02eab01e2b7b842bdf1f85775550b6, type: 3}
   musicSource: {fileID: 1039509449192657796}
   sfxSource: {fileID: 4652383416156189528}
 --- !u!1 &4427073596244659024

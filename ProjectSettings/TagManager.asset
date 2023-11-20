@@ -11,6 +11,7 @@ TagManager:
   - MenuGate
   - Floppy
   - Projectile
+  - MenuController
   layers:
   - Default
   - TransparentFX
