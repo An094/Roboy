@@ -71,6 +71,10 @@ public class CommandHandler : MonoBehaviour
             {
                 menuController.Load("LevelSelection");
             }
+            else if(nextScene.Contains("Setting"))
+            {
+                menuController.Load("Setting");
+            }
             else if(nextScene.Contains("Quit"))
             {
                 Application.Quit();
