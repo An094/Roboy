@@ -60,6 +60,12 @@ MonoBehaviour:
     m_clip: {fileID: 8300000, guid: 8b67a1a9fb2929745b8d6891d439c9ab, type: 3}
   - m_name: Land
     m_clip: {fileID: 8300000, guid: ab02eab01e2b7b842bdf1f85775550b6, type: 3}
+  - m_name: Catch
+    m_clip: {fileID: 8300000, guid: 7a6247855bd30a541a7e6ee56db55085, type: 3}
+  - m_name: Die
+    m_clip: {fileID: 8300000, guid: 01f840cdc714e6444a1424dd1b807706, type: 3}
+  - m_name: Complete
+    m_clip: {fileID: 8300000, guid: 8f89d3892babd0247beb95ed14400b11, type: 3}
   musicSource: {fileID: 1039509449192657796}
   sfxSource: {fileID: 4652383416156189528}
 --- !u!1 &4427073596244659024

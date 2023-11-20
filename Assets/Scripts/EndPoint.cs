@@ -34,6 +34,7 @@ public class EndPoint : MonoBehaviour
         m_endpointAnimator.SetTrigger("Open");
         //yield return new WaitForSeconds(transitionTime);
         StartCoroutine(m_player.DoorIn());
+        AudioManager.Instance.PlaySFX("Complete");
         yield return new WaitForSeconds(2f);
         m_LevelTrasition.OnEnd();
         yield return new WaitForSeconds(transitionTime);
@@ -45,6 +46,7 @@ public class EndPoint : MonoBehaviour
         m_endpointAnimator.SetTrigger("Open");
         //yield return new WaitForSeconds(transitionTime);
         StartCoroutine(m_player.DoorIn());
+        AudioManager.Instance.PlaySFX("Complete");
         yield return new WaitForSeconds(2f);
         m_LevelTrasition.OnEnd();
         yield return new WaitForSeconds(transitionTime);

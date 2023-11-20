@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using DG.Tweening;
 
 public class DraggableFloppy : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler, IPointerDownHandler, IPointerUpHandler
 {
@@ -75,5 +76,11 @@ public class DraggableFloppy : MonoBehaviour, IBeginDragHandler, IDragHandler, I
     {
         m_floppyDisplay.position = new Vector2(transform.position.x, transform.position.y);
         AudioManager.Instance.PlaySFX("Drop");
+    }
+
+    public void Appear()
+    {
+        transform.DOLocalRotate(new Vector3(0, 360, 0), 1 , RotateMode.FastBeyond360).SetRelative(false).SetEase(Ease.OutExpo);
+
     }
 }

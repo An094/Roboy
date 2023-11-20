@@ -166,6 +166,7 @@ public class PlayerController : MonoBehaviour
     {
         if (!IsAlive) return;
         IsAlive = false;
+        AudioManager.Instance.PlaySFX("Die");
         m_rb.velocity = new Vector2(0, m_rb.velocity.y);
         m_Animator.SetTrigger("Die");
         DeathCount++;
