@@ -4,6 +4,11 @@ using UnityEngine;
 
 public class Projectile : MonoBehaviour
 {
+    private float duration = 3f;
+    private void Start()
+    {
+        Destroy(gameObject, duration);
+    }
     // Start is called before the first frame update
     private void OnTriggerEnter2D(Collider2D collision)
     {

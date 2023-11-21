@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class SettingController : MonoBehaviour
 {
     [SerializeField] private Slider _musicSlider, _sfxSlider;
+    [SerializeField] private Animator m_settingSceneAnimator;
 
     private void Start()
     {
@@ -33,8 +34,17 @@ public class SettingController : MonoBehaviour
         AudioManager.Instance.SFXVolume(_sfxSlider.value);
     }
 
-    public void LoadScene(string name)
+
+    IEnumerator Load(string name)
     {
+        m_settingSceneAnimator.SetTrigger("Close");
+        yield return new WaitForSeconds(0.5f);
         SceneManager.LoadScene(name);
+    }
+
+    public void OnButtonClosePressed()
+    {
+        AudioManager.Instance.PlaySFX("MouseClick");
+        StartCoroutine(Load("Menu"));
     }
 }

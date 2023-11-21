@@ -46,13 +46,14 @@ public class Canon : MonoBehaviour
 
     IEnumerator Fire()
     {
-        WaitForSeconds wait = new WaitForSeconds(3f);
+        WaitForSeconds wait = new WaitForSeconds(4f);
         while (CanFire)
         {
             CanFire = false;
             m_animator.SetTrigger("Fire");
             GameObject canonball = Instantiate(m_CanonBallPref, m_firePoint.position, transform.rotation);
-            canonball.GetComponent<Rigidbody2D>().AddForce(Vector2.right * 3.0f, ForceMode2D.Impulse);
+            Vector2 projectileDir = new Vector2(transform.localScale.x * -1, 0);
+            canonball.GetComponent<Rigidbody2D>().AddForce(projectileDir * 3.0f, ForceMode2D.Impulse);
             yield return wait;
             CanFire = true;
         }
