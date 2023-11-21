@@ -6,6 +6,12 @@ using UnityEngine.SceneManagement;
 public class SettingController : MonoBehaviour
 {
     [SerializeField] private Slider _musicSlider, _sfxSlider;
+
+    private void Start()
+    {
+        _musicSlider.value = PlayerPrefs.GetFloat("MusicVolume", 1f);
+        _sfxSlider.value = PlayerPrefs.GetFloat("SFXVolume", 1f);
+    }
     // Start is called before the first frame update
     public void ToggleMusic()
     {

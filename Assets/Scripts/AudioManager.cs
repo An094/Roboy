@@ -24,6 +24,12 @@ public class AudioManager : MonoBehaviour
         }
     }
 
+    private void Start()
+    {
+        musicSource.volume = PlayerPrefs.GetFloat("MusicVolume", 1f);
+        sfxSource.volume = PlayerPrefs.GetFloat("SFXVolume", 1f);
+    }
+
     public void PlayMusic(string name)
     {
         Sound s = Array.Find(musicSounds, x => x.m_name == name);
@@ -49,7 +55,7 @@ public class AudioManager : MonoBehaviour
         }
         else
         {
-            musicSource.PlayOneShot(s.m_clip);
+            sfxSource.PlayOneShot(s.m_clip);
         }
     }
 
@@ -65,11 +71,13 @@ public class AudioManager : MonoBehaviour
 
     public void MusicVolume(float volume)
     {
+        PlayerPrefs.SetFloat("MusicVolume", volume);
         musicSource.volume = volume;
     }
 
     public void SFXVolume(float volume)
     {
+        PlayerPrefs.SetFloat("SFXVolume", volume);
         sfxSource.volume = volume;
     }
 }
