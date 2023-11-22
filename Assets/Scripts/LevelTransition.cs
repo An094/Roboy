@@ -7,6 +7,7 @@ using UnityEngine.UI;
 public class LevelTransition : MonoBehaviour
 {
     [SerializeField] private Image image;
+    [SerializeField] private Camera cam;
     private Vector2 startPos;
     private GameObject m_player;
     private void Awake()
@@ -48,7 +49,7 @@ public class LevelTransition : MonoBehaviour
     // Update is called once per frame
     private Vector2 WorldToUI(GameObject obj)
     {
-        Vector2 screenPoint = RectTransformUtility.WorldToScreenPoint(Camera.main, obj.transform.position);
+        Vector2 screenPoint = RectTransformUtility.WorldToScreenPoint(cam, obj.transform.position);
 
         Vector2 anchoredPosition = transform.InverseTransformPoint(screenPoint);
         return anchoredPosition;
