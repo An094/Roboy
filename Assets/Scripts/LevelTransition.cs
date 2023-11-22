@@ -26,10 +26,10 @@ public class LevelTransition : MonoBehaviour
         {
             Vector2 targetPos = WorldToUI(m_player);
 
-            image.rectTransform.DOAnchorPos(targetPos, 1f);
+            image.rectTransform.DOAnchorPos(targetPos, 1.2f);
 
-            image.rectTransform.DOScale(new Vector3(0f, 0f, 0f), 1f);
-            image.DOFade(0.5f, 1f).SetDelay(0.7f);
+            image.rectTransform.DOScale(new Vector3(0f, 0f, 0f), 1.2f);
+            image.DOFade(0f, 0.5f).SetDelay(0.7f);
 
         };
     }
