@@ -150,8 +150,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 075d3f0b554868440a303ec7a533deb2
-      internalID: -963226281
+      spriteID: c0d5bef25d7b6a249bb49ea1163bb6b5
+      internalID: 674456701
       vertices: []
       indices: 
       edges: []
@@ -171,8 +171,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6d17135656d618d4cb12e9341b4582fd
-      internalID: -1852327338
+      spriteID: df283cc546eab3b40a3f475c53dd2448
+      internalID: 67375184
       vertices: []
       indices: 
       edges: []
@@ -192,8 +192,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 483b7a15633ef95449fccd0758b9e589
-      internalID: -1415415757
+      spriteID: df08dfc94e285cf4b82eb85510a4beef
+      internalID: 393816427
       vertices: []
       indices: 
       edges: []
@@ -213,8 +213,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 66bfd237150f03940836aae3ba724565
-      internalID: -1930694660
+      spriteID: 7dd159af87b00814eafa4a7fc7180e6e
+      internalID: 1712743673
       vertices: []
       indices: 
       edges: []
@@ -234,8 +234,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c656f4f7de518e04ba7dd3d498845dad
-      internalID: -1071553417
+      spriteID: 155f0b917807642458475c16e28b81a9
+      internalID: 1702684485
       vertices: []
       indices: 
       edges: []
@@ -255,8 +255,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 315a81624a429e644ad0ac7b3fcc8c43
-      internalID: 301132548
+      spriteID: 42b8b828a834fbd4fb5a4a3451297379
+      internalID: 234083504
       vertices: []
       indices: 
       edges: []
@@ -276,8 +276,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7a29c6126d808c14daba1573c3842690
-      internalID: -104813272
+      spriteID: 13d1d84fd712814438c95a1e4f8b00ee
+      internalID: -54265005
       vertices: []
       indices: 
       edges: []
@@ -297,8 +297,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: dde32213baafb164980e4ec061633309
-      internalID: -1701922671
+      spriteID: 18490b8944563954f9159bae84b191f1
+      internalID: -1794709014
       vertices: []
       indices: 
       edges: []
@@ -318,8 +318,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b643581ca0ac6ca46827138c6081f557
-      internalID: -1980660995
+      spriteID: 86d0dfbad8dd17b4bb5cbfe929b926a7
+      internalID: 24413536
       vertices: []
       indices: 
       edges: []
@@ -339,8 +339,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 48299115e839b8d40a9245d42ac5a98a
-      internalID: -1576097144
+      spriteID: fcd8dab1f449c7242b4a8b394a014d2e
+      internalID: -986149582
       vertices: []
       indices: 
       edges: []
@@ -360,8 +360,29 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 00aa33a3d3bd7024a93d00431216a09e
-      internalID: -1455032954
+      spriteID: 89f7735d7696d5c4eaa1800baac99abc
+      internalID: 205486963
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dog_DoorIn_11
+      rect:
+        serializedVersion: 2
+        x: 1056
+        y: 0
+        width: 96
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 68c507f501176ef4eb70ca9a034d184b
+      internalID: 1211952552
       vertices: []
       indices: 
       edges: []
@@ -377,17 +398,18 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Dog_DoorIn_0: -963226281
-      Dog_DoorIn_1: -1852327338
-      Dog_DoorIn_10: -1455032954
-      Dog_DoorIn_2: -1415415757
-      Dog_DoorIn_3: -1930694660
-      Dog_DoorIn_4: -1071553417
-      Dog_DoorIn_5: 301132548
-      Dog_DoorIn_6: -104813272
-      Dog_DoorIn_7: -1701922671
-      Dog_DoorIn_8: -1980660995
-      Dog_DoorIn_9: -1576097144
+      Dog_DoorIn_0: 674456701
+      Dog_DoorIn_1: 67375184
+      Dog_DoorIn_10: 205486963
+      Dog_DoorIn_11: 1211952552
+      Dog_DoorIn_2: 393816427
+      Dog_DoorIn_3: 1712743673
+      Dog_DoorIn_4: 1702684485
+      Dog_DoorIn_5: 234083504
+      Dog_DoorIn_6: -54265005
+      Dog_DoorIn_7: -1794709014
+      Dog_DoorIn_8: 24413536
+      Dog_DoorIn_9: -986149582
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
