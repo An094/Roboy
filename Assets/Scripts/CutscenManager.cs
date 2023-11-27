@@ -11,11 +11,11 @@ public class CutscenManager : MonoBehaviour
     [SerializeField] private Camera cam;
     private Vector2 targetPos;
 
-    private void Start()
-    {
-        targetPos = image.rectTransform.position;
-        image.rectTransform.anchoredPosition = WorldToUI(startPos.position);
-    }
+    //private void Start()
+    //{
+    //    targetPos = image.rectTransform.position;
+    //    image.rectTransform.anchoredPosition = WorldToUI(startPos.position);
+    //}
     public void OnEnd()
     {
         SceneManager.LoadScene("Level1");

@@ -8,6 +8,7 @@ public class LevelTransition : MonoBehaviour
 {
     [SerializeField] private Image image;
     [SerializeField] private Camera cam;
+    [SerializeField] private bool IsPlayOnStart = true;
     private Vector2 startPos;
     private GameObject m_player;
     private void Awake()
@@ -18,7 +19,10 @@ public class LevelTransition : MonoBehaviour
     void Start()
     {
         startPos = image.rectTransform.anchoredPosition;
-        OnStart();
+        if(IsPlayOnStart)
+        {
+            OnStart();
+        }
     }
 
     public void OnStart()

@@ -150,8 +150,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c0d5bef25d7b6a249bb49ea1163bb6b5
-      internalID: 674456701
+      spriteID: c0449ff5d214dd7428c7bc804bc6ad39
+      internalID: -686111545
       vertices: []
       indices: 
       edges: []
@@ -171,8 +171,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: df283cc546eab3b40a3f475c53dd2448
-      internalID: 67375184
+      spriteID: 7bb1b6de59e1dff44b96fdf22e70c60d
+      internalID: -1721267416
       vertices: []
       indices: 
       edges: []
@@ -192,8 +192,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: df08dfc94e285cf4b82eb85510a4beef
-      internalID: 393816427
+      spriteID: 4dddcbd3e496d7e41b543f0c11886536
+      internalID: 818199686
       vertices: []
       indices: 
       edges: []
@@ -213,8 +213,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7dd159af87b00814eafa4a7fc7180e6e
-      internalID: 1712743673
+      spriteID: 05d84b1830ede0447a56693e9c6e81ea
+      internalID: -1023065767
       vertices: []
       indices: 
       edges: []
@@ -234,8 +234,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 155f0b917807642458475c16e28b81a9
-      internalID: 1702684485
+      spriteID: cc693793656b76d4da4d18fbb26422c3
+      internalID: 1182326216
       vertices: []
       indices: 
       edges: []
@@ -255,8 +255,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 42b8b828a834fbd4fb5a4a3451297379
-      internalID: 234083504
+      spriteID: 68a0eb6ac06bee341a307bc27e3e8d6b
+      internalID: 792408408
       vertices: []
       indices: 
       edges: []
@@ -276,8 +276,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 13d1d84fd712814438c95a1e4f8b00ee
-      internalID: -54265005
+      spriteID: a95ce773178d887429c17889522e47a6
+      internalID: -969424652
       vertices: []
       indices: 
       edges: []
@@ -297,8 +297,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 18490b8944563954f9159bae84b191f1
-      internalID: -1794709014
+      spriteID: c984db78893bb37478e0fe119a3d6724
+      internalID: -404821202
       vertices: []
       indices: 
       edges: []
@@ -318,8 +318,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 86d0dfbad8dd17b4bb5cbfe929b926a7
-      internalID: 24413536
+      spriteID: e137b6b4dd502bc47b4bdcc515441aaf
+      internalID: 911715801
       vertices: []
       indices: 
       edges: []
@@ -339,8 +339,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fcd8dab1f449c7242b4a8b394a014d2e
-      internalID: -986149582
+      spriteID: 0ecd49e8ee19f0045b33d7a40cfd86b4
+      internalID: -377069593
       vertices: []
       indices: 
       edges: []
@@ -360,8 +360,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 89f7735d7696d5c4eaa1800baac99abc
-      internalID: 205486963
+      spriteID: 426414492e826834ca3984b0d98c39da
+      internalID: -2033232265
       vertices: []
       indices: 
       edges: []
@@ -381,8 +381,50 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 68c507f501176ef4eb70ca9a034d184b
-      internalID: 1211952552
+      spriteID: 2f06d6d92986e3d4cacd7f1cf91effd5
+      internalID: -831661349
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dog_DoorIn_12
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 0
+        width: 96
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 559daa5e3d46dee45ad05ecc35a3e720
+      internalID: 648530016
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dog_DoorIn_13
+      rect:
+        serializedVersion: 2
+        x: 1248
+        y: 0
+        width: 96
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 71717b45911a41840aec407b6ac5e3f1
+      internalID: 1503424516
       vertices: []
       indices: 
       edges: []
@@ -398,18 +440,20 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Dog_DoorIn_0: 674456701
-      Dog_DoorIn_1: 67375184
-      Dog_DoorIn_10: 205486963
-      Dog_DoorIn_11: 1211952552
-      Dog_DoorIn_2: 393816427
-      Dog_DoorIn_3: 1712743673
-      Dog_DoorIn_4: 1702684485
-      Dog_DoorIn_5: 234083504
-      Dog_DoorIn_6: -54265005
-      Dog_DoorIn_7: -1794709014
-      Dog_DoorIn_8: 24413536
-      Dog_DoorIn_9: -986149582
+      Dog_DoorIn_0: -686111545
+      Dog_DoorIn_1: -1721267416
+      Dog_DoorIn_10: -2033232265
+      Dog_DoorIn_11: -831661349
+      Dog_DoorIn_12: 648530016
+      Dog_DoorIn_13: 1503424516
+      Dog_DoorIn_2: 818199686
+      Dog_DoorIn_3: -1023065767
+      Dog_DoorIn_4: 1182326216
+      Dog_DoorIn_5: 792408408
+      Dog_DoorIn_6: -969424652
+      Dog_DoorIn_7: -404821202
+      Dog_DoorIn_8: 911715801
+      Dog_DoorIn_9: -377069593
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
