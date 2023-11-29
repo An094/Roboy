@@ -58,4 +58,5 @@ public class LevelTransition : MonoBehaviour
         Vector2 anchoredPosition = transform.InverseTransformPoint(screenPoint);
         return anchoredPosition;
     }
+
 }
