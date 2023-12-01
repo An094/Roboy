@@ -51,6 +51,7 @@ public class Checkpoint : MonoBehaviour
     IEnumerator TurnOn()
     {
         m_animator.SetTrigger("TurnOn");
+        AudioManager.Instance.PlaySFX("TurnOn");
         m_playerController.respawnPosition = m_respawnPoint.position;
         yield return new WaitForSeconds(0.5f);
         m_animator.SetBool("On", true);

@@ -30,9 +30,6 @@ EditorBuildSettings:
     path: Assets/Scenes/Level6.unity
     guid: 99bbd99b3e44811498c10d0a9054eabd
   - enabled: 1
-    path: Assets/Scenes/Menu_Static.unity
-    guid: 5ed4c24ad0c6a9048aee398882272e19
-  - enabled: 1
     path: Assets/Scenes/Setting.unity
     guid: 3e0d98be38b147d4fbad1a5c20eaff10
   m_configObjects: {}

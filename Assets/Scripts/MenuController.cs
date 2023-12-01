@@ -11,8 +11,8 @@ public class MenuController : MonoBehaviour
     //[SerializeField] private Animator menuAnimator;
     private void Start()
     {
-        AudioManager.Instance.PlayMusic("Rain");
-        AudioManager.Instance.MusicVolume(0.1f);
+        //AudioManager.Instance.PlayMusic("Rain");
+        //AudioManager.Instance.MusicVolume(0.1f);
         if (PlayerPrefs.GetInt("PlayCutscene", 0) == 0)
         {
             PlayerPrefs.SetInt("PlayCutscene", 1);

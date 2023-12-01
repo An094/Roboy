@@ -7,7 +7,6 @@ public class AudioManager : MonoBehaviour
 {
 
     public static AudioManager Instance;
-
     [SerializeField] private Sound[] musicSounds, sfxSounds;
     [SerializeField] private AudioSource musicSource, sfxSource;
 
