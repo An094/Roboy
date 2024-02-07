@@ -27,6 +27,7 @@ public class SettingsMenu : MonoBehaviour
     Button mainButton;
     SettingsMenuItem[] menuItems;
 
+    [SerializeField] Text speedText;
     //is menu opened or not
     bool isExpanded = false;
 
@@ -117,5 +118,19 @@ public class SettingsMenu : MonoBehaviour
     {
         //remove click listener to avoid memory leaks
         mainButton.onClick.RemoveListener(ToggleMenu);
+    }
+
+    public void ToggleSpeed()
+    {
+        if(Time.timeScale == 2f)
+        {
+            Time.timeScale = 1f;
+            speedText.text = "x1";
+        }
+        else
+        {
+            Time.timeScale = 2f;
+            speedText.text = "x2";
+        }
     }
 }
