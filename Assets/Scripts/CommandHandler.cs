@@ -67,18 +67,39 @@ public class CommandHandler : MonoBehaviour
             string nextScene = m_StatementText3.text;
             GameObject menuControllerGO = GameObject.FindGameObjectWithTag("MenuController");
             MenuController menuController = menuControllerGO.GetComponent<MenuController>();
-            if (nextScene.Contains("Play"))
+
+            if (Application.platform == RuntimePlatform.Android)
             {
-                menuController.Load("LevelSelection");
+                if (nextScene.Contains("Play"))
+                {
+                    menuController.Load("LevelSelection");
+                }
+                else if (nextScene.Contains("Setting"))
+                {
+                    menuController.Load("Setting");
+                }
+                else if (nextScene.Contains("Quit"))
+                {
+                    Application.Quit();
+                }
             }
-            else if(nextScene.Contains("Setting"))
+            else
             {
-                menuController.Load("Setting");
+                if (nextScene.Contains("Play"))
+                {
+                    menuController.Load("W_LevelSelection");
+                }
+                else if (nextScene.Contains("Setting"))
+                {
+                    menuController.Load("W_Setting");
+                }
+                else if (nextScene.Contains("Quit"))
+                {
+                    Application.Quit();
+                }
             }
-            else if(nextScene.Contains("Quit"))
-            {
-                Application.Quit();
-            }
+
+           
             return;
 
         }

@@ -22,6 +22,13 @@ public class EndGameHandler : MonoBehaviour
         AudioManager.Instance.PlaySFX("Complete");
         m_levelTransition.OnEnd();
         yield return new WaitForSeconds(1);
-        SceneManager.LoadScene("Menu");
+        if(Application.platform == RuntimePlatform.Android)
+        {
+            SceneManager.LoadScene("Menu");
+        }
+        else
+        {
+            SceneManager.LoadScene("W_Menu");
+        }
     }
 }

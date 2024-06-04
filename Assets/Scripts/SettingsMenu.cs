@@ -105,12 +105,33 @@ public class SettingsMenu : MonoBehaviour
                 SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
                 break;
             case 1:
-                SceneManager.LoadScene("LevelSelection");
-                break;
+                {
+                    if(Application.platform == RuntimePlatform.Android)
+                    {
+                        SceneManager.LoadScene("LevelSelection");
+                    }
+                    else
+                    {
+                        SceneManager.LoadScene("W_LevelSelection");
+                    }
+                    break;
+                }
+                
             case 2:
+                {
+                    if(Application.platform == RuntimePlatform.Android)
+                    {
+                        SceneManager.LoadScene("Menu");
+                    }
+                    else
+                    {
+                        SceneManager.LoadScene("W_Menu");
+
+                    }
+                    break;
+                }
                 //third button
-                SceneManager.LoadScene("Menu");
-                break;
+                
         }
     }
 

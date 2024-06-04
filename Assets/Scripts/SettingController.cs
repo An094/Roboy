@@ -45,6 +45,14 @@ public class SettingController : MonoBehaviour
     public void OnButtonClosePressed()
     {
         AudioManager.Instance.PlaySFX("MouseClick");
-        StartCoroutine(Load("Menu"));
+
+        if(Application.platform == RuntimePlatform.Android)
+        {
+            StartCoroutine(Load("Menu"));
+        }
+        else
+        {
+            StartCoroutine(Load("W_Menu"));
+        }
     }
 }
